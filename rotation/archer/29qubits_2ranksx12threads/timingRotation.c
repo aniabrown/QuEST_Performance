@@ -17,8 +17,8 @@
 # include <string.h>
 # include <omp.h>
 
-# include "QuEST/precision.h"
-# include "QuEST/qubits.h"
+# include "../../../QuEST_v0.9.0/precision.h"
+# include "../../../QuEST_v0.9.0/qubits.h"
 
 //! Max number of angles used to define qubit rotation
 # define MaxAngles      10
