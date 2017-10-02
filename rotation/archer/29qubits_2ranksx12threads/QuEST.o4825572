@@ -1,0 +1,47 @@
+--------------------------------------------------------------------------------
+*** ambrown2   Job: 4825572.sdb   started: 02/10/17 17:39:25   host: mom4 ***
+*** ambrown2   Job: 4825572.sdb   started: 02/10/17 17:39:25   host: mom4 ***
+*** ambrown2   Job: 4825572.sdb   started: 02/10/17 17:39:25   host: mom4 ***
+*** ambrown2   Job: 4825572.sdb   started: 02/10/17 17:39:25   host: mom4 ***
+
+--------------------------------------------------------------------------------
+/bin/rm -f *.o demo
+cc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -c timingRotation.c
+cc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -c ../../../QuEST_v0.9.0/qubits.c
+cc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -c ../../../QuEST_v0.9.0/qubits_env_local.c
+cc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -o demo timingRotation.o qubits.o qubits_env_local.o -lm
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 536870912.
+EXECUTION ENVIRONMENT:
+Running locally on one node
+Number of ranks is 1
+OpenMP enabled
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 536870912.
+EXECUTION ENVIRONMENT:
+Running locally on one node
+Number of ranks is 1
+OpenMP enabled
+Number of threads available is 12
+Precision: size of REAL is 8 bytes
+Number of threads available is 12
+Precision: size of REAL is 8 bytes
+Rotating
+Rotating
+VERIFICATION: total probability=1.00000000000008
+VERIFICATION: total probability=1.00000000000008
+Application 28645556 resources: utime ~6429s, stime ~12s, Rss ~8388072, inblocks ~3721, outblocks ~9710
+--------------------------------------------------------------------------------
+
+Resources requested: ncpus=24,place=free,walltime=00:10:00
+Resources allocated: cpupercent=0,cput=00:00:06,mem=9072kb,ncpus=24,vmem=172032kb,walltime=00:04:45
+
+*** ambrown2   Job: 4825572.sdb   ended: 02/10/17 17:44:09   queue: standard ***
+*** ambrown2   Job: 4825572.sdb   ended: 02/10/17 17:44:09   queue: standard ***
+*** ambrown2   Job: 4825572.sdb   ended: 02/10/17 17:44:09   queue: standard ***
+*** ambrown2   Job: 4825572.sdb   ended: 02/10/17 17:44:09   queue: standard ***
+--------------------------------------------------------------------------------

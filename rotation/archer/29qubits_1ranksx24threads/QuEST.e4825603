@@ -1,0 +1,32 @@
+icc: command line warning #10121: overriding '-xCORE-AVX-I' with '-xAVX'
+timingRotation.c(217): warning #181: argument of type "long" is incompatible with format "%d", expecting argument of type "int"
+                          fprintf(timing, "%d, %.8f, %.8f, %.8f, %.8f\n", index, avg, standardDev, max-avg, avg-min);
+                                                                          ^
+
+timingRotation.c(65): (col. 34) remark: main has been targeted for automatic cpu dispatch
+icc: command line warning #10121: overriding '-xCORE-AVX-I' with '-xAVX'
+../../../QuEST_v0.9.0/qubits.c(385): (col. 1) remark: rotateQubitLocal has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(468): (col. 1) remark: rotateQubitDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(526): (col. 1) remark: controlRotateQubitLocal has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(625): (col. 1) remark: controlRotateQubitDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(754): (col. 1) remark: sigmaXDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(871): (col. 1) remark: controlNotDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(987): (col. 1) remark: sigmaYDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1099): (col. 1) remark: hadamardDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1237): (col. 1) remark: phaseGateDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1318): (col. 1) remark: findProbabilityOfZeroLocal has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1397): (col. 1) remark: findProbabilityOfZeroDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1468): (col. 1) remark: controlPhaseGate has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1558): (col. 1) remark: quadCPhaseGate has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1703): (col. 1) remark: measureInStateDistributedRenorm has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1752): (col. 1) remark: measureInStateDistributedSetZero has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1794): (col. 1) remark: filterOut111Local has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1846): (col. 1) remark: probOfFilterOut111Local has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1893): (col. 59) remark: getProbEl has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(290): (col. 1) remark: initStateDebug has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(243): (col. 1) remark: initStateOfSingleQubit has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(204): (col. 1) remark: initStatePlus has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(162): (col. 1) remark: initStateZero has been targeted for automatic cpu dispatch
+icc: command line warning #10121: overriding '-xCORE-AVX-I' with '-xAVX'
+../../../QuEST_v0.9.0/qubits_env_local.c(47): (col. 49) remark: calcTotalProbability has been targeted for automatic cpu dispatch
+icc: command line warning #10121: overriding '-xCORE-AVX-I' with '-xAVX'
