@@ -18,7 +18,7 @@ cd $PBS_O_WORKDIR
 NUM_QUBITS=29
 EXE=demo
 export KMP_AFFINITY=disabled
-export OMP_NUM_THREADS=12
+export OMP_NUM_THREADS=24
 
 module purge
 module load intel-compilers
@@ -26,4 +26,4 @@ module load intel-compilers
 make clean
 make
 
-aprun -n 2 -d 12 -cc numa_node ./$EXE $NUM_QUBITS
+aprun -n 1 -d 24 -cc numa_node ./$EXE $NUM_QUBITS

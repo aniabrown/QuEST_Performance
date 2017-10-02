@@ -14,7 +14,7 @@ CRAY_SYSTEM = 1
 EXE = demo
 MY_FILE_NAME = timingRotation
 USE_MPI = 0
-USE_OPENMP = 0
+USE_OPENMP = 1
 QUEST_DIR = ../../../QuEST_v0.9.0
 
 #
