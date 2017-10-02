@@ -5,7 +5,7 @@
 # for jobs needing 128Gb per node
 ####PBS -l select=1:bigmem=true
 
-#PBS -l walltime=00:40:00
+#PBS -l walltime=00:10:00
 #PBS -A INSERT_PROJECT_CODE
 
 # set name of job
@@ -19,9 +19,6 @@ NUM_QUBITS=29
 EXE=demo
 export KMP_AFFINITY=disabled
 export OMP_NUM_THREADS=24
-
-module purge
-module load intel-compilers
 
 make clean
 make
