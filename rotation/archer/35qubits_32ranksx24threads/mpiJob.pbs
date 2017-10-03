@@ -6,7 +6,6 @@
 ####PBS -l select=1:bigmem=true
 
 #PBS -l walltime=00:30:00
-#PBS -A INSERT_PROJECT_CODE
 
 # set name of job
 #PBS -N QuEST
