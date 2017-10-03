@@ -1,0 +1,69 @@
+--------------------------------------------------------------------------------
+*** ambrown2   Job: 4827336.sdb   started: 03/10/17 15:06:59   host: mom3 ***
+*** ambrown2   Job: 4827336.sdb   started: 03/10/17 15:06:59   host: mom3 ***
+*** ambrown2   Job: 4827336.sdb   started: 03/10/17 15:06:59   host: mom3 ***
+*** ambrown2   Job: 4827336.sdb   started: 03/10/17 15:06:59   host: mom3 ***
+
+--------------------------------------------------------------------------------
+/bin/rm -f *.o demo
+cc -O2 -fprotect-parens -std=c99 -openmp -c timingRotation.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits_env_mpi.c
+cc -O2 -fprotect-parens -std=c99 -openmp -o demo timingRotation.o qubits.o qubits_env_mpi.o -lm
+QUBITS:
+Number of qubits is 34.
+Number of amps is 17179869184.
+Number of amps per rank is 1073741824.
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 16
+OpenMP enabled
+Number of threads available is 16
+Precision: size of REAL is 8 bytes
+Rotating
+Rotating qubit 0
+Rotating qubit 1
+Rotating qubit 2
+Rotating qubit 3
+Rotating qubit 4
+Rotating qubit 5
+Rotating qubit 6
+Rotating qubit 7
+Rotating qubit 8
+Rotating qubit 9
+Rotating qubit 10
+Rotating qubit 11
+Rotating qubit 12
+Rotating qubit 13
+Rotating qubit 14
+Rotating qubit 15
+Rotating qubit 16
+Rotating qubit 17
+Rotating qubit 18
+Rotating qubit 19
+Rotating qubit 20
+Rotating qubit 21
+Rotating qubit 22
+Rotating qubit 23
+Rotating qubit 24
+Rotating qubit 25
+Rotating qubit 26
+Rotating qubit 27
+Rotating qubit 28
+Rotating qubit 29
+Rotating qubit 30
+Rotating qubit 31
+Rotating qubit 32
+Rotating qubit 33
+VERIFICATION: total probability=1.00000000000010
+Application 28650487 resources: utime ~139825s, stime ~2355s, Rss ~33561080, inblocks ~122328, outblocks ~1595017
+--------------------------------------------------------------------------------
+
+Resources requested: ncpus=384,place=free,walltime=00:30:00
+Resources allocated: cpupercent=1,cput=00:00:07,mem=121904kb,ncpus=384,vmem=280324kb,walltime=00:16:05
+
+*** ambrown2   Job: 4827336.sdb   ended: 03/10/17 15:23:03   queue: standard ***
+*** ambrown2   Job: 4827336.sdb   ended: 03/10/17 15:23:03   queue: standard ***
+*** ambrown2   Job: 4827336.sdb   ended: 03/10/17 15:23:03   queue: standard ***
+*** ambrown2   Job: 4827336.sdb   ended: 03/10/17 15:23:03   queue: standard ***
+--------------------------------------------------------------------------------
