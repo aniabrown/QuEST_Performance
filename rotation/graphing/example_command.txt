@@ -1,1 +1,1 @@
-pdflatex --jobname=weak_mpi_omp_arcusRegular graphs.tex
+pdflatex --jobname=archer_35qubit_strongScaling_full graph_35qubit_strong_scaling.tex
