@@ -1,0 +1,1 @@
+pdflatex --jobname=archer_35qubit_strongScaling_full graph_35qubit_strong_scaling.tex
