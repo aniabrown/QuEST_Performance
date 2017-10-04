@@ -1,0 +1,241 @@
+% This is the file survey.tex
+\documentclass{article}
+\usepackage{graphics}
+\usepackage{tikz}
+\pgfrealjobname{survey}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13}
+\begin{document}
+
+% ================================== archer_weakScaling_full
+\beginpgfgraphicnamed{archer_weakScaling_full}
+\begin{tikzpicture}[scale=1.2]
+\begin{axis}[
+	xlabel={Rotation qubit},
+	ylabel={Time (s)},
+	legend pos=outer north east,
+	very thin
+	]
+	
+\addplot [
+	mark=*, mark size=2,
+	magenta,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../archer/34qubits_16ranksx24threads/TIMINGROTATE_34qubits_CPU_16ranksx24threads.csv};
+\addlegendentry{34qubits, 16ranksx24threads}
+
+\addplot [
+	mark=*, mark size=2,
+	cyan,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../archer/35qubits_32ranksx24threads/TIMINGROTATE_35qubits_CPU_32ranksx24threads.csv};
+\addlegendentry{35qubits, 32ranksx24threads}
+
+\addplot [
+	mark=*, mark size=2,
+	orange,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../archer/36qubits_64ranksx24threads/TIMINGROTATE_36qubits_CPU_64ranksx24threads.csv};
+\addlegendentry{36qubits, 64ranksx24threads}
+
+\addplot [
+	mark=*, mark size=2,
+	gray,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../archer/37qubits_128ranksx24threads/TIMINGROTATE_37qubits_CPU_128ranksx24threads.csv};
+\addlegendentry{37qubits, 128ranksx24threads}
+
+\end{axis}
+\end{tikzpicture}
+\endpgfgraphicnamed
+
+% ================================== END archer_weakScaling_full
+
+
+% ================================== archer_weakScaling_zoomLowQubits
+\beginpgfgraphicnamed{archer_weakScaling_zoomLowQubits}
+\begin{tikzpicture}[scale=1.2]
+\begin{axis}[
+	xlabel={Rotation qubit},
+	ylabel={Time (s)},
+	legend pos=outer north east,
+	very thin,
+	xmax=28
+	]
+	
+\addplot [
+	mark=*, mark size=2,
+	magenta,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../archer/34qubits_16ranksx24threads/TIMINGROTATE_34qubits_CPU_16ranksx24threads.csv};
+\addlegendentry{34qubits, 16ranksx24threads}
+
+\addplot [
+	mark=*, mark size=2,
+	cyan,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../archer/35qubits_32ranksx24threads/TIMINGROTATE_35qubits_CPU_32ranksx24threads.csv};
+\addlegendentry{35qubits, 32ranksx24threads}
+
+\addplot [
+	mark=*, mark size=2,
+	orange,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../archer/36qubits_64ranksx24threads/TIMINGROTATE_36qubits_CPU_64ranksx24threads.csv};
+\addlegendentry{36qubits, 64ranksx24threads}
+
+\addplot [
+	mark=*, mark size=2,
+	gray,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../archer/37qubits_128ranksx24threads/TIMINGROTATE_37qubits_CPU_128ranksx24threads.csv};
+\addlegendentry{37qubits, 128ranksx24threads}
+
+\end{axis}
+\end{tikzpicture}
+\endpgfgraphicnamed
+
+% ================================== END archer_weakScaling_zoomLowQubits
+
+
+% ================================== archer_weakScaling_zoomHighQubits
+\beginpgfgraphicnamed{archer_weakScaling_zoomHighQubits}
+\begin{tikzpicture}[scale=1.2]
+\begin{axis}[
+	xlabel={Rotation qubit},
+	ylabel={Time (s)},
+	legend pos=outer north east,
+	very thin,
+	xmin=28
+	]
+	
+\addplot [
+	mark=*, mark size=2,
+	magenta,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../archer/34qubits_16ranksx24threads/TIMINGROTATE_34qubits_CPU_16ranksx24threads.csv};
+\addlegendentry{34qubits, 16ranksx24threads}
+
+\addplot [
+	mark=*, mark size=2,
+	cyan,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../archer/35qubits_32ranksx24threads/TIMINGROTATE_35qubits_CPU_32ranksx24threads.csv};
+\addlegendentry{35qubits, 32ranksx24threads}
+
+\addplot [
+	mark=*, mark size=2,
+	orange,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../archer/36qubits_64ranksx24threads/TIMINGROTATE_36qubits_CPU_64ranksx24threads.csv};
+\addlegendentry{36qubits, 64ranksx24threads}
+
+\addplot [
+	mark=*, mark size=2,
+	gray,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../archer/37qubits_128ranksx24threads/TIMINGROTATE_37qubits_CPU_128ranksx24threads.csv};
+\addlegendentry{37qubits, 128ranksx24threads}
+
+\end{axis}
+\end{tikzpicture}
+\endpgfgraphicnamed
+
+% ================================== END archer_weakScaling_zoomHighQubits
+\end{document}
