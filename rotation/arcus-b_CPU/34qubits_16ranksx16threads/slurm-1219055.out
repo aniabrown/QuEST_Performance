@@ -1,0 +1,72 @@
+/bin/rm -f *.o demo
+mpicc -O2 -fprotect-parens -std=c99 -openmp -c timingRotation.c
+icc: command line remark #10411: option '-openmp' is deprecated and will be removed in a future release. Please use the replacement option '-qopenmp'
+timingRotation.c(65): (col. 34) remark: main has been targeted for automatic cpu dispatch
+mpicc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits.c
+icc: command line remark #10411: option '-openmp' is deprecated and will be removed in a future release. Please use the replacement option '-qopenmp'
+../../../QuEST_v0.9.0/qubits.c(385): (col. 1) remark: rotateQubitLocal has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(468): (col. 1) remark: rotateQubitDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(526): (col. 1) remark: controlRotateQubitLocal has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(625): (col. 1) remark: controlRotateQubitDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1099): (col. 1) remark: hadamardDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1237): (col. 1) remark: phaseGateDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1318): (col. 1) remark: findProbabilityOfZeroLocal has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1397): (col. 1) remark: findProbabilityOfZeroDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1703): (col. 1) remark: measureInStateDistributedRenorm has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1752): (col. 1) remark: measureInStateDistributedSetZero has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1846): (col. 1) remark: probOfFilterOut111Local has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1893): (col. 59) remark: getProbEl has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(290): (col. 1) remark: initStateDebug has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(204): (col. 1) remark: initStatePlus has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(162): (col. 1) remark: initStateZero has been targeted for automatic cpu dispatch
+mpicc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits_env_mpi.c
+icc: command line remark #10411: option '-openmp' is deprecated and will be removed in a future release. Please use the replacement option '-qopenmp'
+../../../QuEST_v0.9.0/qubits_env_mpi.c(107): (col. 49) remark: calcTotalProbability has been targeted for automatic cpu dispatch
+mpicc -O2 -fprotect-parens -std=c99 -openmp -o demo timingRotation.o qubits.o qubits_env_mpi.o -lm
+icc: command line remark #10411: option '-openmp' is deprecated and will be removed in a future release. Please use the replacement option '-qopenmp'
+QUBITS:
+Number of qubits is 34.
+Number of amps is 17179869184.
+Number of amps per rank is 1073741824.
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 16
+OpenMP enabled
+Number of threads available is 16
+Precision: size of REAL is 8 bytes
+Rotating
+Rotating qubit 0
+Rotating qubit 1
+Rotating qubit 2
+Rotating qubit 3
+Rotating qubit 4
+Rotating qubit 5
+Rotating qubit 6
+Rotating qubit 7
+Rotating qubit 8
+Rotating qubit 9
+Rotating qubit 10
+Rotating qubit 11
+Rotating qubit 12
+Rotating qubit 13
+Rotating qubit 14
+Rotating qubit 15
+Rotating qubit 16
+Rotating qubit 17
+Rotating qubit 18
+Rotating qubit 19
+Rotating qubit 20
+Rotating qubit 21
+Rotating qubit 22
+Rotating qubit 23
+Rotating qubit 24
+Rotating qubit 25
+Rotating qubit 26
+Rotating qubit 27
+Rotating qubit 28
+Rotating qubit 29
+Rotating qubit 30
+Rotating qubit 31
+Rotating qubit 32
+Rotating qubit 33
+VERIFICATION: total probability=1.00000000000009
