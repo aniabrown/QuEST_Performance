@@ -77,6 +77,21 @@ table [
 ] {../archer/37qubits_128ranksx24threads/TIMINGROTATE_37qubits_CPU_128ranksx24threads.csv};
 \addlegendentry{37qubits, 128ranksx24threads}
 
+\addplot [
+	mark=*, mark size=2,
+	brown,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../archer/38qubits_256ranksx24threads/TIMINGROTATE_38qubits_CPU_256ranksx24threads.csv};
+\addlegendentry{38qubits, 256ranksx24threads}
+
 \end{axis}
 \end{tikzpicture}
 \endpgfgraphicnamed
@@ -154,6 +169,21 @@ table [
 	y error minus=minDelta
 ] {../archer/37qubits_128ranksx24threads/TIMINGROTATE_37qubits_CPU_128ranksx24threads.csv};
 \addlegendentry{37qubits, 128ranksx24threads}
+
+\addplot [
+	mark=*, mark size=2,
+	brown,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../archer/38qubits_256ranksx24threads/TIMINGROTATE_38qubits_CPU_256ranksx24threads.csv};
+\addlegendentry{38qubits, 256ranksx24threads}
 
 \end{axis}
 \end{tikzpicture}
@@ -233,9 +263,90 @@ table [
 ] {../archer/37qubits_128ranksx24threads/TIMINGROTATE_37qubits_CPU_128ranksx24threads.csv};
 \addlegendentry{37qubits, 128ranksx24threads}
 
+\addplot [
+	mark=*, mark size=2,
+	brown,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../archer/38qubits_256ranksx24threads/TIMINGROTATE_38qubits_CPU_256ranksx24threads.csv};
+\addlegendentry{38qubits, 256ranksx24threads}
+
 \end{axis}
 \end{tikzpicture}
 \endpgfgraphicnamed
 
 % ================================== END archer_weakScaling_zoomHighQubits
+
+
+
+% ================================== arcus-b_CPU_weakScaling_full
+\beginpgfgraphicnamed{arcus-b_CPU_weakScaling_full}
+\begin{tikzpicture}[scale=1.2]
+\begin{axis}[
+	xlabel={Rotation qubit},
+	ylabel={Time (s)},
+	legend pos=outer north east,
+	very thin
+	]
+	
+\addplot [
+	mark=*, mark size=2,
+	magenta,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../arcus-b_CPU/34qubits_16ranksx16threads/TIMINGROTATE_34qubits_CPU_16ranksx16threads.csv};
+\addlegendentry{34qubits, 16ranksx16threads}
+
+\addplot [
+	mark=*, mark size=2,
+	cyan,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../arcus-b_CPU/35qubits_32ranksx16threads/TIMINGROTATE_35qubits_CPU_32ranksx16threads.csv};
+\addlegendentry{35qubits, 32ranksx16threads}
+
+\addplot [
+	mark=*, mark size=2,
+	orange,
+	error bars/.cd,
+	y dir = both, y explicit,
+	]
+table [
+	x=qubit, 
+	y=time(s), 
+	col sep=comma,
+	y error plus=maxDelta,
+	y error minus=minDelta
+] {../arcus-b_CPU/36qubits_64ranksx16threads/TIMINGROTATE_36qubits_CPU_64ranksx16threads.csv};
+\addlegendentry{36qubits, 64ranksx16threads}
+
+
+
+\end{axis}
+\end{tikzpicture}
+\endpgfgraphicnamed
+
+% ================================== END arcus-b_CPU_weakScaling_full
+
 \end{document}
