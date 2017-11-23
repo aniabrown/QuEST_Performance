@@ -84,6 +84,22 @@ REAL getImagAmpEl(MultiQubit multiQubit, long long int index){
 	return multiQubit.stateVec.imag[index];
 }
 
+void getLargestProbEl(MultiQubit multiQubit, REAL *maxProbOut, int *indexOut){
+        int index, maxIndex;
+        REAL maxProb=0, tempProb=0;
+        for (index=0; index<multiQubit.numAmps; index++){
+                tempProb = multiQubit.stateVec.real[index]*multiQubit.stateVec.real[index] + 
+                        multiQubit.stateVec.imag[index]*multiQubit.stateVec.imag[index];
+                if (tempProb > maxProb) {
+			maxProb = tempProb; 
+			maxIndex = index;
+		}
+        }
+	*maxProbOut = maxProb;
+	*indexOut = maxIndex;
+}
+
+
 void rotateQubit(MultiQubit multiQubit, const int rotQubit, Complex alpha, Complex beta) 
 {
 	// all values required to update state vector lie in this rank
