@@ -1,0 +1,73 @@
+--------------------------------------------------------------------------------
+*** ambrown2   Job: 4930538.sdb   started: 21/11/17 22:15:15   host: mom5 ***
+*** ambrown2   Job: 4930538.sdb   started: 21/11/17 22:15:15   host: mom5 ***
+*** ambrown2   Job: 4930538.sdb   started: 21/11/17 22:15:15   host: mom5 ***
+*** ambrown2   Job: 4930538.sdb   started: 21/11/17 22:15:15   host: mom5 ***
+
+--------------------------------------------------------------------------------
+/bin/rm -f *.o demo
+cc -O2 -fprotect-parens -std=c99 -openmp -c 3SATSolver.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c 3SATGenerator.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits_env_mpi.c
+cc -O2 -fprotect-parens -std=c99 -openmp -o demo 3SATSolver.o qubits.o 3SATGenerator.o qubits_env_mpi.o -lm
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 2
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 268435456.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 57.67091 s
+
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 2
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 268435456.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 58.08181 s
+
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 2
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 268435456.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 58.32651 s
+
+local: 663, dist: 30
+reached 11101011110111001101011001010> in 58s not including memory allocation with probability 0.000001
+which was the correct state
+local: 663, dist: 30
+Application 29105714 resources: utime ~7259s, stime ~69s, Rss ~8396336, inblocks ~14730, outblocks ~34993
+--------------------------------------------------------------------------------
+
+Resources requested: ncpus=48,place=free,walltime=00:05:00
+Resources allocated: cpupercent=0,cput=00:00:07,mem=122824kb,ncpus=48,vmem=278164kb,walltime=00:03:10
+
+*** ambrown2   Job: 4930538.sdb   ended: 21/11/17 22:18:25   queue: standard ***
+*** ambrown2   Job: 4930538.sdb   ended: 21/11/17 22:18:25   queue: standard ***
+*** ambrown2   Job: 4930538.sdb   ended: 21/11/17 22:18:25   queue: standard ***
+*** ambrown2   Job: 4930538.sdb   ended: 21/11/17 22:18:25   queue: standard ***
+--------------------------------------------------------------------------------
