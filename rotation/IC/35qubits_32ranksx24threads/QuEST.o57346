@@ -1,0 +1,127 @@
+ 
+Imperial College London HPC Service
+-----------------------------------
+Job QuEST, jobid 57346.cx2, username abrown15 - started execution at 20:44:18 Thu 23/11/17 on system r2i1n1
+ 
+
+# mpiexec: full path to program is /home/abrown15/git_profiling/rotation/IC/35qubits_32ranksx24threads/demo
+# mpiexec: program arguments are: 35
+# mpiexec: 32 ranks allocated via PBS select
+# mpiexec: 24 OpenMP threads / rank allocated by PBS select
+# mpiexec: Job has exclusive use of the allocated nodes. Enabling process-pinning
+# mpiexec: launching program...
+
+# mpiexec: machinefile configured as:
+r2i1n10.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n1.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n2.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n3.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n4.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n5.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n6.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n7.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n8.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n9.ib0.cx2.hpc.ic.ac.uk:1
+r2i3n11.ib0.cx2.hpc.ic.ac.uk:1
+r2i3n12.ib0.cx2.hpc.ic.ac.uk:1
+r2i3n13.ib0.cx2.hpc.ic.ac.uk:1
+r2i3n9.ib0.cx2.hpc.ic.ac.uk:1
+r2i4n2.ib0.cx2.hpc.ic.ac.uk:1
+r2i4n3.ib0.cx2.hpc.ic.ac.uk:1
+r2i5n7.ib0.cx2.hpc.ic.ac.uk:1
+r2i5n8.ib0.cx2.hpc.ic.ac.uk:1
+r3i7n10.ib0.cx2.hpc.ic.ac.uk:1
+r3i7n11.ib0.cx2.hpc.ic.ac.uk:1
+r3i7n12.ib0.cx2.hpc.ic.ac.uk:1
+r3i7n13.ib0.cx2.hpc.ic.ac.uk:1
+r3i7n14.ib0.cx2.hpc.ic.ac.uk:1
+r3i7n15.ib0.cx2.hpc.ic.ac.uk:1
+r3i7n16.ib0.cx2.hpc.ic.ac.uk:1
+r3i7n17.ib0.cx2.hpc.ic.ac.uk:1
+r3i7n4.ib0.cx2.hpc.ic.ac.uk:1
+r3i7n5.ib0.cx2.hpc.ic.ac.uk:1
+r3i7n6.ib0.cx2.hpc.ic.ac.uk:1
+r3i7n7.ib0.cx2.hpc.ic.ac.uk:1
+r3i7n8.ib0.cx2.hpc.ic.ac.uk:1
+r3i7n9.ib0.cx2.hpc.ic.ac.uk:1
+#
+(r2i1n10.ib0.cx2.hpc.ic.ac.uk:0)
+(r2i1n1.ib0.cx2.hpc.ic.ac.uk:1)
+(r2i1n2.ib0.cx2.hpc.ic.ac.uk:2)
+(r2i1n3.ib0.cx2.hpc.ic.ac.uk:3)
+(r2i1n4.ib0.cx2.hpc.ic.ac.uk:4)
+(r2i1n5.ib0.cx2.hpc.ic.ac.uk:5)
+(r2i1n6.ib0.cx2.hpc.ic.ac.uk:6)
+(r2i1n7.ib0.cx2.hpc.ic.ac.uk:7)
+(r2i1n8.ib0.cx2.hpc.ic.ac.uk:8)
+(r2i1n9.ib0.cx2.hpc.ic.ac.uk:9)
+(r2i3n11.ib0.cx2.hpc.ic.ac.uk:10)
+(r2i3n12.ib0.cx2.hpc.ic.ac.uk:11)
+(r2i3n13.ib0.cx2.hpc.ic.ac.uk:12)
+(r2i3n9.ib0.cx2.hpc.ic.ac.uk:13)
+(r2i4n2.ib0.cx2.hpc.ic.ac.uk:14)
+(r2i4n3.ib0.cx2.hpc.ic.ac.uk:15)
+(r2i5n7.ib0.cx2.hpc.ic.ac.uk:16)
+(r2i5n8.ib0.cx2.hpc.ic.ac.uk:17)
+(r3i7n10.ib0.cx2.hpc.ic.ac.uk:18)
+(r3i7n11.ib0.cx2.hpc.ic.ac.uk:19)
+(r3i7n12.ib0.cx2.hpc.ic.ac.uk:20)
+(r3i7n13.ib0.cx2.hpc.ic.ac.uk:21)
+(r3i7n14.ib0.cx2.hpc.ic.ac.uk:22)
+(r3i7n15.ib0.cx2.hpc.ic.ac.uk:23)
+(r3i7n16.ib0.cx2.hpc.ic.ac.uk:24)
+(r3i7n17.ib0.cx2.hpc.ic.ac.uk:25)
+(r3i7n4.ib0.cx2.hpc.ic.ac.uk:26)
+(r3i7n5.ib0.cx2.hpc.ic.ac.uk:27)
+(r3i7n6.ib0.cx2.hpc.ic.ac.uk:28)
+(r3i7n7.ib0.cx2.hpc.ic.ac.uk:29)
+(r3i7n8.ib0.cx2.hpc.ic.ac.uk:30)
+(r3i7n9.ib0.cx2.hpc.ic.ac.uk:31)
+QUBITS:
+Number of qubits is 35.
+Number of amps is 34359738368.
+Number of amps per rank is 1073741824.
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 32
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+VERIFICATION: total probability=1.00000000000010
+ 
+Imperial College London HPC Service
+-----------------------------------
+Job QuEST, jobid 57346.cx2, username abrown15 - end of execution at 21:17:23 Thu 23/11/17 on system r2i1n1
+ 
