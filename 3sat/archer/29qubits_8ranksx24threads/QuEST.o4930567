@@ -1,0 +1,79 @@
+--------------------------------------------------------------------------------
+*** ambrown2   Job: 4930567.sdb   started: 21/11/17 22:31:46   host: mom3 ***
+*** ambrown2   Job: 4930567.sdb   started: 21/11/17 22:31:46   host: mom3 ***
+*** ambrown2   Job: 4930567.sdb   started: 21/11/17 22:31:46   host: mom3 ***
+*** ambrown2   Job: 4930567.sdb   started: 21/11/17 22:31:46   host: mom3 ***
+
+--------------------------------------------------------------------------------
+/bin/rm -f *.o demo
+cc -O2 -fprotect-parens -std=c99 -openmp -c 3SATSolver.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c 3SATGenerator.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits_env_mpi.c
+cc -O2 -fprotect-parens -std=c99 -openmp -o demo 3SATSolver.o qubits.o 3SATGenerator.o qubits_env_mpi.o -lm
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 8
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 67108864.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 18.18040 s
+
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 8
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 67108864.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 18.36912 s
+
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 8
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 67108864.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 18.32172 s
+
+local: 663, dist: 30
+reached 11101011110111001101011001000> in 19s not including memory allocation with probability 0.000001
+WHICH WAS AN INCORRECT SOLUTION
+local: 663, dist: 30
+local: 663, dist: 30
+local: 663, dist: 30
+local: 663, dist: 30
+local: 663, dist: 30
+local: 663, dist: 30
+local: 663, dist: 30
+Application 29105790 resources: utime ~10027s, stime ~157s, Rss ~2104096, inblocks ~59640, outblocks ~137635
+--------------------------------------------------------------------------------
+
+Resources requested: ncpus=192,place=free,walltime=00:05:00
+Resources allocated: cpupercent=0,cput=00:00:08,mem=122836kb,ncpus=192,vmem=281236kb,walltime=00:01:10
+
+*** ambrown2   Job: 4930567.sdb   ended: 21/11/17 22:32:56   queue: standard ***
+*** ambrown2   Job: 4930567.sdb   ended: 21/11/17 22:32:56   queue: standard ***
+*** ambrown2   Job: 4930567.sdb   ended: 21/11/17 22:32:56   queue: standard ***
+*** ambrown2   Job: 4930567.sdb   ended: 21/11/17 22:32:56   queue: standard ***
+--------------------------------------------------------------------------------

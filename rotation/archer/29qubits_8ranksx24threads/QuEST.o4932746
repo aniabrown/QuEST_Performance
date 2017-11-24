@@ -1,0 +1,42 @@
+--------------------------------------------------------------------------------
+*** ambrown2   Job: 4932746.sdb   started: 23/11/17 12:01:53   host: mom1 ***
+*** ambrown2   Job: 4932746.sdb   started: 23/11/17 12:01:53   host: mom1 ***
+*** ambrown2   Job: 4932746.sdb   started: 23/11/17 12:01:53   host: mom1 ***
+*** ambrown2   Job: 4932746.sdb   started: 23/11/17 12:01:53   host: mom1 ***
+
+--------------------------------------------------------------------------------
+/bin/rm -f *.o demo
+cc -O2 -fprotect-parens -std=c99 -openmp -c timingRotation.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits_env_mpi.c
+cc -O2 -fprotect-parens -std=c99 -openmp -o demo timingRotation.o qubits.o qubits_env_mpi.o -lm
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 67108864.
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 8
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+VERIFICATION: total probability=1.00000000000008
+Application 29126352 resources: utime ~5905s, stime ~92s, Rss ~2103168, inblocks ~59824, outblocks ~136052
+--------------------------------------------------------------------------------
+
+Resources requested: ncpus=192,place=free,walltime=00:10:00
+Resources allocated: cpupercent=0,cput=00:00:07,mem=122172kb,ncpus=192,vmem=280844kb,walltime=00:00:47
+
+*** ambrown2   Job: 4932746.sdb   ended: 23/11/17 12:02:39   queue: standard ***
+*** ambrown2   Job: 4932746.sdb   ended: 23/11/17 12:02:39   queue: standard ***
+*** ambrown2   Job: 4932746.sdb   ended: 23/11/17 12:02:39   queue: standard ***
+*** ambrown2   Job: 4932746.sdb   ended: 23/11/17 12:02:39   queue: standard ***
+--------------------------------------------------------------------------------

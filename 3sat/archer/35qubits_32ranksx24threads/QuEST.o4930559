@@ -1,0 +1,104 @@
+--------------------------------------------------------------------------------
+*** ambrown2   Job: 4930559.sdb   started: 21/11/17 22:26:59   host: mom2 ***
+*** ambrown2   Job: 4930559.sdb   started: 21/11/17 22:26:59   host: mom2 ***
+*** ambrown2   Job: 4930559.sdb   started: 21/11/17 22:26:59   host: mom2 ***
+*** ambrown2   Job: 4930559.sdb   started: 21/11/17 22:26:59   host: mom2 ***
+
+--------------------------------------------------------------------------------
+/bin/rm -f *.o demo
+cc -O2 -fprotect-parens -std=c99 -openmp -c 3SATSolver.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c 3SATGenerator.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits_env_mpi.c
+cc -O2 -fprotect-parens -std=c99 -openmp -o demo 3SATSolver.o qubits.o 3SATGenerator.o qubits_env_mpi.o -lm
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 32
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 35.
+Number of amps is 34359738368.
+Number of amps per rank is 1073741824.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 435.11874 s
+
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 32
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 35.
+Number of amps is 34359738368.
+Number of amps per rank is 1073741824.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 448.48180 s
+
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 32
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 35.
+Number of amps is 34359738368.
+Number of amps per rank is 1073741824.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 443.46387 s
+
+local: 777, dist: 15
+reached 10000100000110111011101010001100000> in 441s not including memory allocation with probability 0.000000
+WHICH WAS AN INCORRECT SOLUTION
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+Application 29105770 exit signals: Killed
+Application 29105770 resources: utime ~479975s, stime ~8568s, Rss ~33560080, inblocks ~235633, outblocks ~3245163
+--------------------------------------------------------------------------------
+
+Resources requested: ncpus=768,place=free,walltime=01:35:00
+Resources allocated: cpupercent=0,cput=00:00:08,mem=122840kb,ncpus=768,vmem=278164kb,walltime=00:22:25
+
+*** ambrown2   Job: 4930559.sdb   ended: 21/11/17 22:49:23   queue: standard ***
+*** ambrown2   Job: 4930559.sdb   ended: 21/11/17 22:49:23   queue: standard ***
+*** ambrown2   Job: 4930559.sdb   ended: 21/11/17 22:49:23   queue: standard ***
+*** ambrown2   Job: 4930559.sdb   ended: 21/11/17 22:49:23   queue: standard ***
+--------------------------------------------------------------------------------

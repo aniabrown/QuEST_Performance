@@ -104,6 +104,30 @@ REAL getImagAmpEl(MultiQubit multiQubit, long long int index){
         return el; 
 }
 
+void getLargestProbEl(MultiQubit multiQubit, REAL *maxProbOut, int *indexOut){
+	int index, maxIndex;
+	struct {
+		double maxProb;
+		int rank;
+	} in, out;
+	REAL maxProb=0, tempProb=0, globalMaxProb=0;
+	for (index=0; index<multiQubit.numAmps; index++){
+		tempProb = multiQubit.stateVec.real[index]*multiQubit.stateVec.real[index] +
+			multiQubit.stateVec.imag[index]*multiQubit.stateVec.imag[index];
+		if (tempProb > maxProb) {
+			maxProb = tempProb;
+			maxIndex = index;
+		}
+	}
+	in.maxProb = maxProb;
+	in.rank = multiQubit.chunkId;
+	MPI_Allreduce(&in, &out, 1, MPI_DOUBLE_INT, MPI_MAXLOC, MPI_COMM_WORLD);
+	*maxProbOut = out.maxProb;
+
+	MPI_Bcast(&maxIndex, 1, MPI_INT, out.rank, MPI_COMM_WORLD);
+	*indexOut = maxIndex;
+}
+
 REAL calcTotalProbability(MultiQubit multiQubit){
   /* IJB - implemented using Kahan summation for greater accuracy at a slight floating
      point operation overhead. For more details see https://en.wikipedia.org/wiki/Kahan_summation_algorithm */

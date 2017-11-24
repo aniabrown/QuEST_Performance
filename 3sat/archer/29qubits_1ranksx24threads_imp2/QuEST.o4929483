@@ -1,0 +1,41 @@
+--------------------------------------------------------------------------------
+*** ambrown2   Job: 4929483.sdb   started: 21/11/17 14:42:59   host: mom3 ***
+*** ambrown2   Job: 4929483.sdb   started: 21/11/17 14:42:59   host: mom3 ***
+*** ambrown2   Job: 4929483.sdb   started: 21/11/17 14:42:59   host: mom3 ***
+*** ambrown2   Job: 4929483.sdb   started: 21/11/17 14:42:59   host: mom3 ***
+
+--------------------------------------------------------------------------------
+/bin/rm -f *.o demo
+cc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -c 3SATSolver.c
+cc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -c ../../../QuEST_v0.9.0/qubits.c
+cc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -c 3SATGenerator.c
+cc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -c ../../../QuEST_v0.9.0/qubits_env_local.c
+cc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -o demo 3SATSolver.o qubits.o 3SATGenerator.o qubits_env_local.o -lm
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 97.04422 s
+
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 97.01672 s
+
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 97.03962 s
+
+reached 11101011110111001101011001010> in 97s not including memory allocation with probability 0.000001
+which was the correct state
+Application 29102646 resources: utime ~6599s, stime ~39s, Rss ~8390340, inblocks ~3790, outblocks ~9967
+--------------------------------------------------------------------------------
+
+Resources requested: ncpus=24,place=free,walltime=00:30:00
+Resources allocated: cpupercent=0,cput=00:00:07,mem=27984kb,ncpus=24,vmem=239252kb,walltime=00:05:05
+
+*** ambrown2   Job: 4929483.sdb   ended: 21/11/17 14:48:03   queue: standard ***
+*** ambrown2   Job: 4929483.sdb   ended: 21/11/17 14:48:03   queue: standard ***
+*** ambrown2   Job: 4929483.sdb   ended: 21/11/17 14:48:03   queue: standard ***
+*** ambrown2   Job: 4929483.sdb   ended: 21/11/17 14:48:03   queue: standard ***
+--------------------------------------------------------------------------------

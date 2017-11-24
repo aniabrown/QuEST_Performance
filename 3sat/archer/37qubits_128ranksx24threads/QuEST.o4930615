@@ -1,0 +1,200 @@
+--------------------------------------------------------------------------------
+*** ambrown2   Job: 4930615.sdb   started: 21/11/17 22:57:34   host: mom3 ***
+*** ambrown2   Job: 4930615.sdb   started: 21/11/17 22:57:34   host: mom3 ***
+*** ambrown2   Job: 4930615.sdb   started: 21/11/17 22:57:34   host: mom3 ***
+*** ambrown2   Job: 4930615.sdb   started: 21/11/17 22:57:34   host: mom3 ***
+
+--------------------------------------------------------------------------------
+/bin/rm -f *.o demo
+cc -O2 -fprotect-parens -std=c99 -openmp -c 3SATSolver.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c 3SATGenerator.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits_env_mpi.c
+cc -O2 -fprotect-parens -std=c99 -openmp -o demo 3SATSolver.o qubits.o 3SATGenerator.o qubits_env_mpi.o -lm
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 128
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 37.
+Number of amps is 137438953472.
+Number of amps per rank is 1073741824.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 572.05855 s
+
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 128
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 37.
+Number of amps is 137438953472.
+Number of amps per rank is 1073741824.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 588.51121 s
+
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 128
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 37.
+Number of amps is 137438953472.
+Number of amps per rank is 1073741824.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 581.32179 s
+
+local: 831, dist: 27
+reached 0010110110000101111100001101000000000> in 579s not including memory allocation with probability 0.000000
+WHICH WAS AN INCORRECT SOLUTION
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+local: 831, dist: 27
+Application 29105891 exit signals: Killed
+Application 29105891 resources: utime ~63231s, stime ~1186s, Rss ~33560132, inblocks ~875858, outblocks ~2629994
+--------------------------------------------------------------------------------
+
+Resources requested: ncpus=3072,place=free,walltime=01:00:00
+Resources allocated: cpupercent=0,cput=00:00:07,mem=122828kb,ncpus=3072,vmem=278156kb,walltime=00:29:20
+
+*** ambrown2   Job: 4930615.sdb   ended: 21/11/17 23:26:54   queue: standard ***
+*** ambrown2   Job: 4930615.sdb   ended: 21/11/17 23:26:54   queue: standard ***
+*** ambrown2   Job: 4930615.sdb   ended: 21/11/17 23:26:54   queue: standard ***
+*** ambrown2   Job: 4930615.sdb   ended: 21/11/17 23:26:54   queue: standard ***
+--------------------------------------------------------------------------------

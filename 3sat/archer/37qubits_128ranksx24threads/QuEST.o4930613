@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------
+*** ambrown2   Job: 4930613.sdb   started: 21/11/17 22:56:45   host: mom1 ***
+*** ambrown2   Job: 4930613.sdb   started: 21/11/17 22:56:45   host: mom1 ***
+*** ambrown2   Job: 4930613.sdb   started: 21/11/17 22:56:45   host: mom1 ***
+*** ambrown2   Job: 4930613.sdb   started: 21/11/17 22:56:45   host: mom1 ***
+
+--------------------------------------------------------------------------------
+/bin/rm -f *.o demo
+cc -O2 -fprotect-parens -std=c99 -openmp -c 3SATSolver.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c 3SATGenerator.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits_env_mpi.c
+cc -O2 -fprotect-parens -std=c99 -openmp -o demo 3SATSolver.o qubits.o 3SATGenerator.o qubits_env_mpi.o -lm
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 128
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 37.
+Number of amps is 137438953472.
+Number of amps per rank is 1073741824.
+cycle 1/1, theta=0.785398 pi/2
+Application 29105889 exit codes: 143
+Application 29105889 resources: utime ~1392s, stime ~3490s, Rss ~20982436, inblocks ~943725, outblocks ~2205005
+--------------------------------------------------------------------------------
+
+Resources requested: ncpus=3072,place=free,walltime=00:30:00
+Resources allocated: cpupercent=0,cput=00:00:04,mem=122832kb,ncpus=3072,vmem=278156kb,walltime=00:00:21
+
+*** ambrown2   Job: 4930613.sdb   ended: 21/11/17 22:57:23   queue: standard ***
+*** ambrown2   Job: 4930613.sdb   ended: 21/11/17 22:57:23   queue: standard ***
+*** ambrown2   Job: 4930613.sdb   ended: 21/11/17 22:57:23   queue: standard ***
+*** ambrown2   Job: 4930613.sdb   ended: 21/11/17 22:57:23   queue: standard ***
+--------------------------------------------------------------------------------
