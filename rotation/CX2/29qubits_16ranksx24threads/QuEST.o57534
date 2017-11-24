@@ -1,0 +1,79 @@
+ 
+Imperial College London HPC Service
+-----------------------------------
+Job QuEST, jobid 57534.cx2, username abrown15 - started execution at 11:47:04 Fri 24/11/17 on system r5i7n0
+ 
+
+# mpiexec: full path to program is /home/abrown15/git_profiling/rotation/CX2/29qubits_16ranksx24threads/demo
+# mpiexec: program arguments are: 29
+# mpiexec: 16 ranks allocated via PBS select
+# mpiexec: 24 OpenMP threads / rank allocated by PBS select
+# mpiexec: Job has exclusive use of the allocated nodes. Enabling process-pinning
+# mpiexec: launching program...
+
+# mpiexec: machinefile configured as:
+r5i7n0.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n10.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n11.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n12.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n13.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n14.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n15.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n1.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n2.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n3.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n4.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n5.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n6.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n7.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n8.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n9.ib0.cx2.hpc.ic.ac.uk:1
+#
+(r5i7n0.ib0.cx2.hpc.ic.ac.uk:0)
+(r5i7n10.ib0.cx2.hpc.ic.ac.uk:1)
+(r5i7n11.ib0.cx2.hpc.ic.ac.uk:2)
+(r5i7n12.ib0.cx2.hpc.ic.ac.uk:3)
+(r5i7n13.ib0.cx2.hpc.ic.ac.uk:4)
+(r5i7n14.ib0.cx2.hpc.ic.ac.uk:5)
+(r5i7n15.ib0.cx2.hpc.ic.ac.uk:6)
+(r5i7n1.ib0.cx2.hpc.ic.ac.uk:7)
+(r5i7n2.ib0.cx2.hpc.ic.ac.uk:8)
+(r5i7n3.ib0.cx2.hpc.ic.ac.uk:9)
+(r5i7n4.ib0.cx2.hpc.ic.ac.uk:10)
+(r5i7n5.ib0.cx2.hpc.ic.ac.uk:11)
+(r5i7n6.ib0.cx2.hpc.ic.ac.uk:12)
+(r5i7n7.ib0.cx2.hpc.ic.ac.uk:13)
+(r5i7n8.ib0.cx2.hpc.ic.ac.uk:14)
+(r5i7n9.ib0.cx2.hpc.ic.ac.uk:15)
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 33554432.
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 16
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+Rotating
+RotatingRotating
+Rotating
+RotatingRotating
+Rotating
+Rotating
+Rotating
+
+
+Rotating
+VERIFICATION: total probability=1.00000000000008
+ 
+Imperial College London HPC Service
+-----------------------------------
+Job QuEST, jobid 57534.cx2, username abrown15 - end of execution at 11:47:37 Fri 24/11/17 on system r5i7n0
+ 

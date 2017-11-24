@@ -1,0 +1,22 @@
+ 
+Imperial College London HPC Service
+-----------------------------------
+Job QuEST, jobid 57539.cx2, username abrown15 - started execution at 11:58:19 Fri 24/11/17 on system r5i7n1
+ 
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 536870912.
+EXECUTION ENVIRONMENT:
+Running locally on one node
+Number of ranks is 1
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+Rotating
+VERIFICATION: total probability=1.00000000000008
+ 
+Imperial College London HPC Service
+-----------------------------------
+Job QuEST, jobid 57539.cx2, username abrown15 - end of execution at 12:00:28 Fri 24/11/17 on system r5i7n1
+ 
