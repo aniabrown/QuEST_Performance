@@ -1,0 +1,43 @@
+ 
+Imperial College London HPC Service
+-----------------------------------
+Job QuEST, jobid 57533.cx2, username abrown15 - started execution at 11:45:42 Fri 24/11/17 on system r5i7n0
+ 
+
+# mpiexec: full path to program is /home/abrown15/git_profiling/rotation/CX2/29qubits_4ranksx24threads/demo
+# mpiexec: program arguments are: 29
+# mpiexec: 4 ranks allocated via PBS select
+# mpiexec: 24 OpenMP threads / rank allocated by PBS select
+# mpiexec: Job has exclusive use of the allocated nodes. Enabling process-pinning
+# mpiexec: launching program...
+
+# mpiexec: machinefile configured as:
+r5i7n0.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n1.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n2.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n3.ib0.cx2.hpc.ic.ac.uk:1
+#
+(r5i7n0.ib0.cx2.hpc.ic.ac.uk:0)
+(r5i7n1.ib0.cx2.hpc.ic.ac.uk:1)
+(r5i7n2.ib0.cx2.hpc.ic.ac.uk:2)
+(r5i7n3.ib0.cx2.hpc.ic.ac.uk:3)
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 134217728.
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 4
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+RotatingRotating
+
+Rotating
+Rotating
+VERIFICATION: total probability=1.00000000000008
+ 
+Imperial College London HPC Service
+-----------------------------------
+Job QuEST, jobid 57533.cx2, username abrown15 - end of execution at 11:47:04 Fri 24/11/17 on system r5i7n0
+ 
