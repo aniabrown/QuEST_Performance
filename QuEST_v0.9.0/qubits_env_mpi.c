@@ -124,6 +124,7 @@ void getLargestProbEl(MultiQubit multiQubit, REAL *maxProbOut, int *indexOut){
 	MPI_Allreduce(&in, &out, 1, MPI_DOUBLE_INT, MPI_MAXLOC, MPI_COMM_WORLD);
 	*maxProbOut = out.maxProb;
 
+	maxIndex = maxIndex + chunkId*multiQubit.numAmps;
 	MPI_Bcast(&maxIndex, 1, MPI_INT, out.rank, MPI_COMM_WORLD);
 	*indexOut = maxIndex;
 }
