@@ -10,7 +10,7 @@ updateThetaFlag=0;
 
 thetaFactors={7.85398*10^-01};
 
-runTime=237;
+runTime=63;
 
 totalSolProb=0.0000000467;
 
