@@ -36,6 +36,7 @@ typedef struct MultiQubit
 	ComplexArray deviceStateVec;
 	//! Storage for reduction of probabilities on GPU
 	REAL *firstLevelReduction, *secondLevelReduction;
+	int *firstLevelIntReduction, *secondLevelIntReduction;
 	//! Number of qubits in the state
 	int numQubits;
 	//! Number of probability amplitudes held in stateVec by this process
@@ -148,6 +149,7 @@ REAL findProbabilityOfZero(MultiQubit multiQubit, const int measureQubit);
 
 REAL findProbabilityOfOutcome(MultiQubit multiQubit, const int measureQubit, int outcome);
 
+void getLargestProbEl(MultiQubit multiQubit, REAL *maxProbOut, int *indexOut);
 
 REAL measureInState(MultiQubit multiQubit, const int measureQubit, int outcome);
 

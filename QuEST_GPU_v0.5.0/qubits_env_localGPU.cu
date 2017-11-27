@@ -24,8 +24,11 @@ void createMultiQubit(MultiQubit *multiQubit, int numQubits, QuESTEnv env)
 	cudaMalloc(&(multiQubit->deviceStateVec.real), multiQubit->numAmps*sizeof(*(multiQubit->deviceStateVec.real)));
 	cudaMalloc(&(multiQubit->deviceStateVec.imag), multiQubit->numAmps*sizeof(*(multiQubit->deviceStateVec.imag)));
 	cudaMalloc(&(multiQubit->firstLevelReduction), ceil(multiQubit->numAmps/(REAL)REDUCE_SHARED_SIZE)*sizeof(REAL));
-	cudaMalloc(&(multiQubit->secondLevelReduction), ceil(multiQubit->numAmps/(REAL)(REDUCE_SHARED_SIZE*REDUCE_SHARED_SIZE))*
-		sizeof(REAL));
+	cudaMalloc(&(multiQubit->firstLevelIntReduction), ceil(multiQubit->numAmps/(REAL)REDUCE_SHARED_SIZE)*sizeof(int));
+	cudaMalloc(&(multiQubit->secondLevelReduction), ceil(multiQubit->numAmps/
+		(REAL)(REDUCE_SHARED_SIZE*REDUCE_SHARED_SIZE))*sizeof(REAL));
+	cudaMalloc(&(multiQubit->secondLevelIntReduction), ceil(multiQubit->numAmps/
+		(REAL)(REDUCE_SHARED_SIZE*REDUCE_SHARED_SIZE))*sizeof(int));
 
         if (!(multiQubit->deviceStateVec.real) || !(multiQubit->deviceStateVec.imag)){
                 printf("Could not allocate memory on GPU!\n");
@@ -39,6 +42,9 @@ void destroyMultiQubit(MultiQubit multiQubit, QuESTEnv env)
 	destroyMultiQubitCPU(multiQubit, env);
 	cudaFree(multiQubit.deviceStateVec.real);
 	cudaFree(multiQubit.deviceStateVec.imag);
+	cudaFree(multiQubit.firstLevelReduction);
+	cudaFree(multiQubit.secondLevelReduction);
+	cudaFree(multiQubit.secondLevelIntReduction);
 }
 
 int GPUExists(void){
@@ -477,6 +483,30 @@ __device__ __host__ unsigned int log2Int( unsigned int x )
         return ans ;
 }
 
+__device__ void reduceBlockFindMax(REAL *arrayIn, int *arrayInLoc, REAL *reducedArrayMax, int *reducedArrayLoc, int length){
+        int i, l, r;
+        int threadMax, maxDepth;
+        threadMax = length/2;
+	maxDepth = log2Int(length/2);
+	int loc, lLarger;
+
+        for (i=0; i<maxDepth+1; i++){
+                if (threadIdx.x<threadMax){
+                        l = threadIdx.x;
+                        r = l + threadMax;
+			lLarger = (arrayIn[l]>=arrayIn[r]);
+			loc = lLarger*l + (!lLarger)*r;
+                        arrayIn[l] = arrayIn[loc];
+			arrayInLoc[l] = arrayInLoc[loc];
+                }
+                threadMax = threadMax >> 1;
+                __syncthreads(); // optimise -- use warp shuffle instead
+        }
+
+        if (threadIdx.x==0) reducedArrayMax[blockIdx.x] = arrayIn[0];
+        if (threadIdx.x==0) reducedArrayLoc[blockIdx.x] = arrayInLoc[0];
+}
+
 __device__ void reduceBlock(REAL *arrayIn, REAL *reducedArray, int length){
         int i, l, r;
         int threadMax, maxDepth;
@@ -494,6 +524,18 @@ __device__ void reduceBlock(REAL *arrayIn, REAL *reducedArray, int length){
         }
 
         if (threadIdx.x==0) reducedArray[blockIdx.x] = arrayIn[0];
+}
+
+__global__ void copySharedReduceBlockFindMax(REAL*arrayIn, int *arrayInLoc, REAL *reducedArrayMax, int *reducedArrayLoc, int length){
+	extern __shared__ REAL tempReductionArray[];
+	int *tempReductionArrayLoc = (int*) &tempReductionArray[length];
+	int blockOffset = blockIdx.x*length;
+	tempReductionArray[threadIdx.x*2] = arrayIn[blockOffset + threadIdx.x*2];
+	tempReductionArray[threadIdx.x*2+1] = arrayIn[blockOffset + threadIdx.x*2+1];
+	tempReductionArrayLoc[threadIdx.x*2] = arrayInLoc[blockOffset + threadIdx.x*2];
+	tempReductionArrayLoc[threadIdx.x*2+1] = arrayInLoc[blockOffset + threadIdx.x*2+1];
+	__syncthreads();
+	reduceBlockFindMax(tempReductionArray, tempReductionArrayLoc, reducedArrayMax, reducedArrayLoc, length);
 }
 
 __global__ void copySharedReduceBlock(REAL*arrayIn, REAL *reducedArray, int length){
@@ -569,6 +611,89 @@ void swapDouble(REAL **a, REAL **b){
         temp = *a;
         *a = *b;
         *b = temp;
+}
+
+void swapInt(int **a, int **b){
+        int *temp;
+        temp = *a;
+        *a = *b;
+        *b = temp;
+}
+
+__global__ void getLargestProbElKernel(MultiQubit multiQubit, REAL *reducedArrayMax, int *reducedArrayLoc)
+{
+        // ----- sizes
+        long long int sizeBlock,                                           // size of blocks
+        sizeHalfBlock;                                       // size of blocks halved
+        // ----- indices
+        long long int thisBlock,                                           // current block
+             index;                                               // current index for first half block
+        // ----- temp variables
+        long long int thisTask;                                   // task based approach for expose loop with small granularity
+        long long int numTasks=multiQubit.numAmps;
+        // (good for shared memory parallelism)
+
+	extern __shared__ REAL tempReductionArray[];
+	int *tempReductionArrayLoc = (int*) &tempReductionArray[blockDim.x];
+
+        REAL *stateVecReal = multiQubit.deviceStateVec.real;
+        REAL *stateVecImag = multiQubit.deviceStateVec.imag;
+
+	thisTask = blockIdx.x*blockDim.x + threadIdx.x;
+	if (thisTask>=numTasks) return;
+
+	REAL realVal, imagVal;
+	realVal = stateVecReal[thisTask];
+	imagVal = stateVecImag[thisTask]; 	
+	tempReductionArray[threadIdx.x] = realVal*realVal + imagVal*imagVal;
+	tempReductionArrayLoc[threadIdx.x] = thisTask;
+	__syncthreads();
+
+	if (threadIdx.x<blockDim.x/2){
+		reduceBlockFindMax(tempReductionArray, tempReductionArrayLoc, reducedArrayMax, reducedArrayLoc, blockDim.x);
+	}
+}
+
+
+void getLargestProbEl(MultiQubit multiQubit, REAL *maxProbOut, int *indexOut)
+{
+	long long int numValuesToReduce = multiQubit.numAmps;
+	int valuesPerCUDABlock, numCUDABlocks, sharedMemSize;
+	REAL stateProb=0;
+	int firstTime=1;
+	int maxReducedPerLevel = REDUCE_SHARED_SIZE;
+
+	while(numValuesToReduce>1){	
+		if (numValuesToReduce<maxReducedPerLevel){
+			// Need less than one CUDA block to reduce values
+			valuesPerCUDABlock = numValuesToReduce;
+			numCUDABlocks = 1;
+		} else {
+			// Use full CUDA blocks, with block size constrained by shared mem usage
+			valuesPerCUDABlock = maxReducedPerLevel;
+			numCUDABlocks = ceil((REAL)numValuesToReduce/valuesPerCUDABlock);
+		}
+		sharedMemSize = valuesPerCUDABlock*sizeof(REAL)
+			+ valuesPerCUDABlock*sizeof(int);
+
+		if (firstTime){
+			getLargestProbElKernel<<<numCUDABlocks, valuesPerCUDABlock, sharedMemSize>>>(
+				multiQubit, multiQubit.firstLevelReduction, multiQubit.firstLevelIntReduction);
+			firstTime=0;
+		} else {
+			cudaDeviceSynchronize();	
+			copySharedReduceBlockFindMax<<<numCUDABlocks, valuesPerCUDABlock/2, sharedMemSize>>>(
+				multiQubit.firstLevelReduction, multiQubit.firstLevelIntReduction,  
+				multiQubit.secondLevelReduction, multiQubit.secondLevelIntReduction, 
+				valuesPerCUDABlock); 
+			cudaDeviceSynchronize();	
+			swapDouble(&(multiQubit.firstLevelReduction), &(multiQubit.secondLevelReduction));
+			swapInt(&(multiQubit.firstLevelIntReduction), &(multiQubit.secondLevelIntReduction));
+		}
+		numValuesToReduce = numValuesToReduce/maxReducedPerLevel;
+	}
+	cudaMemcpy(maxProbOut, multiQubit.firstLevelReduction, sizeof(REAL), cudaMemcpyDeviceToHost);
+	cudaMemcpy(indexOut, multiQubit.firstLevelIntReduction, sizeof(int), cudaMemcpyDeviceToHost);
 }
 
 REAL findProbabilityOfZero(MultiQubit multiQubit,

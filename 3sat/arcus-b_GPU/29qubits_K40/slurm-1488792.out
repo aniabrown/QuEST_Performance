@@ -1,0 +1,101 @@
+Mon Nov 27 16:31:42 2017       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 375.39                 Driver Version: 375.39                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla K40m          On   | 0000:06:00.0     Off |                    0 |
+| N/A   26C    P8    19W / 235W |      0MiB / 11439MiB |      0%   E. Process |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla K40m          On   | 0000:86:00.0     Off |                    0 |
+| N/A   29C    P8    20W / 235W |      0MiB / 11439MiB |      0%   E. Process |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID  Type  Process name                               Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+/bin/rm -f *.o demo
+nvcc -dc -O2 -arch=compute_30 -code=sm_30 -lineinfo  3SATSolver.cpp
+3SATSolver.cpp: In function ‘int main(int, char**)’:
+3SATSolver.cpp:477: warning: deprecated conversion from string constant to ‘char*’
+3SATSolver.cpp:480: warning: deprecated conversion from string constant to ‘char*’
+3SATSolver.cpp:483: warning: deprecated conversion from string constant to ‘char*’
+3SATSolver.cpp:486: warning: deprecated conversion from string constant to ‘char*’
+3SATSolver.cpp:489: warning: deprecated conversion from string constant to ‘char*’
+3SATSolver.cpp:492: warning: deprecated conversion from string constant to ‘char*’
+3SATSolver.cpp:497: warning: deprecated conversion from string constant to ‘char*’
+3SATSolver.cpp:500: warning: deprecated conversion from string constant to ‘char*’
+3SATSolver.cpp:503: warning: deprecated conversion from string constant to ‘char*’
+3SATSolver.cpp:506: warning: deprecated conversion from string constant to ‘char*’
+3SATSolver.cpp:509: warning: deprecated conversion from string constant to ‘char*’
+3SATSolver.cpp:512: warning: deprecated conversion from string constant to ‘char*’
+nvcc -dc -O2 -arch=compute_30 -code=sm_30 -lineinfo  ../../../QuEST_GPU_v0.5.0/qubits.cpp
+nvcc -dc -O2 -arch=compute_30 -code=sm_30 -lineinfo  ../../../QuEST_GPU_v0.5.0/qubits_env_localGPU.cu
+../../../QuEST_GPU_v0.5.0/qubits_env_localGPU.cu(626): warning: variable "sizeBlock" was declared but never referenced
+
+../../../QuEST_GPU_v0.5.0/qubits_env_localGPU.cu(627): warning: variable "sizeHalfBlock" was declared but never referenced
+
+../../../QuEST_GPU_v0.5.0/qubits_env_localGPU.cu(629): warning: variable "thisBlock" was declared but never referenced
+
+../../../QuEST_GPU_v0.5.0/qubits_env_localGPU.cu(630): warning: variable "index" was declared but never referenced
+
+../../../QuEST_GPU_v0.5.0/qubits_env_localGPU.cu(662): warning: variable "stateProb" was declared but never referenced
+
+../../../QuEST_GPU_v0.5.0/qubits_env_localGPU.cu(626): warning: variable "sizeBlock" was declared but never referenced
+
+../../../QuEST_GPU_v0.5.0/qubits_env_localGPU.cu(627): warning: variable "sizeHalfBlock" was declared but never referenced
+
+../../../QuEST_GPU_v0.5.0/qubits_env_localGPU.cu(629): warning: variable "thisBlock" was declared but never referenced
+
+../../../QuEST_GPU_v0.5.0/qubits_env_localGPU.cu(630): warning: variable "index" was declared but never referenced
+
+../../../QuEST_GPU_v0.5.0/qubits_env_localGPU.cu(662): warning: variable "stateProb" was declared but never referenced
+
+nvcc -dc -O2 -arch=compute_30 -code=sm_30 -lineinfo  3SATGenerator.cpp
+nvcc -O2 -arch=compute_30 -code=sm_30 -lineinfo  -o demo 3SATSolver.o qubits.o qubits_env_localGPU.o 3SATGenerator.o 
+EXECUTION ENVIRONMENT:
+Running locally on one node with GPU
+Number of ranks is 1
+OpenMP disabled
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 536870912.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 43.37863 s
+
+EXECUTION ENVIRONMENT:
+Running locally on one node with GPU
+Number of ranks is 1
+OpenMP disabled
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 536870912.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 43.37499 s
+
+EXECUTION ENVIRONMENT:
+Running locally on one node with GPU
+Number of ranks is 1
+OpenMP disabled
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 536870912.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 43.37340 s
+
+local: 663, dist: 30
+reached 11101011110111001101011001010> in 43s not including memory allocation with probability 0.000001
+which was the correct state
