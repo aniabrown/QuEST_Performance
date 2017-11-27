@@ -1,0 +1,328 @@
+--------------------------------------------------------------------------------
+*** ambrown2   Job: 4940574.sdb   started: 27/11/17 12:38:41   host: mom5 ***
+*** ambrown2   Job: 4940574.sdb   started: 27/11/17 12:38:41   host: mom5 ***
+*** ambrown2   Job: 4940574.sdb   started: 27/11/17 12:38:41   host: mom5 ***
+*** ambrown2   Job: 4940574.sdb   started: 27/11/17 12:38:41   host: mom5 ***
+
+--------------------------------------------------------------------------------
+/bin/rm -f *.o demo
+cc -O2 -fprotect-parens -std=c99 -openmp -c 3SATSolver.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c 3SATGenerator.c
+cc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits_env_mpi.c
+cc -O2 -fprotect-parens -std=c99 -openmp -o demo 3SATSolver.o qubits.o 3SATGenerator.o qubits_env_mpi.o -lm
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 256
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 35.
+Number of amps is 34359738368.
+Number of amps per rank is 134217728.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 61.83892 s
+
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 256
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 35.
+Number of amps is 34359738368.
+Number of amps per rank is 134217728.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 63.32651 s
+
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 256
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 35.
+Number of amps is 34359738368.
+Number of amps per rank is 134217728.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 62.66354 s
+
+local: 777, dist: 15
+reached -1-1-1-1-10-1-1-1-1-100-1000-1000-10-10-1-1-10000000> in 63s not including memory allocation with probability 0.000000
+WHICH WAS AN INCORRECT SOLUTION
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+Application 29205400 exit signals: Killed
+Application 29205400 resources: utime ~356646s, stime ~6345s, Rss ~4203796, inblocks ~1799325, outblocks ~4397696
+--------------------------------------------------------------------------------
+
+Resources requested: ncpus=6144,place=free,walltime=00:25:00
+Resources allocated: cpupercent=0,cput=00:00:07,mem=20832kb,ncpus=6144,vmem=172032kb,walltime=00:03:24
+
+*** ambrown2   Job: 4940574.sdb   ended: 27/11/17 12:42:05   queue: standard ***
+*** ambrown2   Job: 4940574.sdb   ended: 27/11/17 12:42:05   queue: standard ***
+*** ambrown2   Job: 4940574.sdb   ended: 27/11/17 12:42:05   queue: standard ***
+*** ambrown2   Job: 4940574.sdb   ended: 27/11/17 12:42:05   queue: standard ***
+--------------------------------------------------------------------------------
