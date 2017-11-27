@@ -1,0 +1,35 @@
+Mon Nov 27 10:43:43 2017       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 375.39                 Driver Version: 375.39                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla K40m          On   | 0000:06:00.0     Off |                    0 |
+| N/A   26C    P8    19W / 235W |      0MiB / 11439MiB |      0%   E. Process |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla K40m          On   | 0000:86:00.0     Off |                    0 |
+| N/A   29C    P8    19W / 235W |      0MiB / 11439MiB |      0%   E. Process |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID  Type  Process name                               Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+/bin/rm -f *.o demo
+nvcc -dc -O2 -arch=compute_30 -code=sm_30 -lineinfo  timingRotation.cpp
+nvcc -dc -O2 -arch=compute_30 -code=sm_30 -lineinfo  ../../../QuEST_GPU_v0.5.0/qubits.cpp
+nvcc -dc -O2 -arch=compute_30 -code=sm_30 -lineinfo  ../../../QuEST_GPU_v0.5.0/qubits_env_localGPU.cu
+nvcc -O2 -arch=compute_30 -code=sm_30 -lineinfo  -o demo timingRotation.o qubits.o qubits_env_localGPU.o 
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 536870912.
+EXECUTION ENVIRONMENT:
+Running locally on one node with GPU
+Number of ranks is 1
+OpenMP disabled
+Rotating
+VERIFICATION: total probability=1.00000000000008
