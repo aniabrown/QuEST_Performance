@@ -1,8 +1,8 @@
 --------------------------------------------------------------------------------
-*** ambrown2   Job: 4930566.sdb   started: 21/11/17 22:31:39   host: mom2 ***
-*** ambrown2   Job: 4930566.sdb   started: 21/11/17 22:31:39   host: mom2 ***
-*** ambrown2   Job: 4930566.sdb   started: 21/11/17 22:31:39   host: mom2 ***
-*** ambrown2   Job: 4930566.sdb   started: 21/11/17 22:31:39   host: mom2 ***
+*** ambrown2   Job: 4940519.sdb   started: 27/11/17 12:16:00   host: mom1 ***
+*** ambrown2   Job: 4940519.sdb   started: 27/11/17 12:16:00   host: mom1 ***
+*** ambrown2   Job: 4940519.sdb   started: 27/11/17 12:16:00   host: mom1 ***
+*** ambrown2   Job: 4940519.sdb   started: 27/11/17 12:16:00   host: mom1 ***
 
 --------------------------------------------------------------------------------
 /bin/rm -f *.o demo
@@ -24,7 +24,7 @@ Number of amps per rank is 134217728.
 cycle 1/1, theta=0.785398 pi/2
 
 
-TOTAL TIME = 30.78232 s
+TOTAL TIME = 31.44796 s
 
 EXECUTION ENVIRONMENT:
 Running distributed (MPI) version
@@ -39,7 +39,7 @@ Number of amps per rank is 134217728.
 cycle 1/1, theta=0.785398 pi/2
 
 
-TOTAL TIME = 30.80950 s
+TOTAL TIME = 31.83429 s
 
 EXECUTION ENVIRONMENT:
 Running distributed (MPI) version
@@ -54,23 +54,22 @@ Number of amps per rank is 134217728.
 cycle 1/1, theta=0.785398 pi/2
 
 
-TOTAL TIME = 30.75489 s
+TOTAL TIME = 31.74028 s
 
 local: 663, dist: 30
-reached 11101011110111001101011001000> in 30s not including memory allocation with probability 0.000001
-WHICH WAS AN INCORRECT SOLUTION
+reached 11101011110111001101011001010> in 32s not including memory allocation with probability 0.000001
+which was the correct state
 local: 663, dist: 30
 local: 663, dist: 30
 local: 663, dist: 30
-Application 29105788 exit signals: Killed
-Application 29105788 resources: utime ~6155s, stime ~73s, Rss ~4202180, inblocks ~28885, outblocks ~69015
+Application 29204727 resources: utime ~8340s, stime ~93s, Rss ~4202412, inblocks ~29844, outblocks ~69211
 --------------------------------------------------------------------------------
 
 Resources requested: ncpus=96,place=free,walltime=00:05:00
-Resources allocated: cpupercent=0,cput=00:00:08,mem=122824kb,ncpus=96,vmem=278164kb,walltime=00:01:47
+Resources allocated: cpupercent=2,cput=00:00:08,mem=26752kb,ncpus=96,vmem=231152kb,walltime=00:01:49
 
-*** ambrown2   Job: 4930566.sdb   ended: 21/11/17 22:33:26   queue: standard ***
-*** ambrown2   Job: 4930566.sdb   ended: 21/11/17 22:33:26   queue: standard ***
-*** ambrown2   Job: 4930566.sdb   ended: 21/11/17 22:33:26   queue: standard ***
-*** ambrown2   Job: 4930566.sdb   ended: 21/11/17 22:33:26   queue: standard ***
+*** ambrown2   Job: 4940519.sdb   ended: 27/11/17 12:17:49   queue: standard ***
+*** ambrown2   Job: 4940519.sdb   ended: 27/11/17 12:17:49   queue: standard ***
+*** ambrown2   Job: 4940519.sdb   ended: 27/11/17 12:17:49   queue: standard ***
+*** ambrown2   Job: 4940519.sdb   ended: 27/11/17 12:17:49   queue: standard ***
 --------------------------------------------------------------------------------
