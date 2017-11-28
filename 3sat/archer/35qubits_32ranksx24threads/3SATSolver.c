@@ -128,7 +128,7 @@ void createOrClearFile(char *filename) {
 
 
 void extractSolution(MultiQubit qubits, int *solBits, REAL *solProb) {
-	int solInt = 0;
+	long long int solInt = 0;
 	getLargestProbEl(qubits, solProb, &solInt);
 	convertToBinary(solInt, qubits.numQubits, solBits);
 }

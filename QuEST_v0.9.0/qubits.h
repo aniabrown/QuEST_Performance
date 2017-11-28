@@ -154,7 +154,7 @@ REAL getImagAmpEl(MultiQubit multiQubit, long long int index);
 */
 REAL getProbEl(MultiQubit multiQubit, long long int index);
 
-void getLargestProbEl(MultiQubit multiQubit, REAL *maxProbOut, int *indexOut);
+void getLargestProbEl(MultiQubit multiQubit, REAL *maxProbOut, long long int *indexOut);
 
 /** Calculate the probability of being in any state by taking the norm of the entire state vector. 
  * Should be equal to 1.

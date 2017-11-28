@@ -104,8 +104,8 @@ REAL getImagAmpEl(MultiQubit multiQubit, long long int index){
         return el; 
 }
 
-void getLargestProbEl(MultiQubit multiQubit, REAL *maxProbOut, int *indexOut){
-	int index, maxIndex;
+void getLargestProbEl(MultiQubit multiQubit, REAL *maxProbOut, long long int *indexOut){
+	long long int index, maxIndex;
 	struct {
 		double maxProb;
 		int rank;
@@ -125,7 +125,7 @@ void getLargestProbEl(MultiQubit multiQubit, REAL *maxProbOut, int *indexOut){
 	*maxProbOut = out.maxProb;
 
 	maxIndex = maxIndex + multiQubit.chunkId*multiQubit.numAmps;
-	MPI_Bcast(&maxIndex, 1, MPI_INT, out.rank, MPI_COMM_WORLD);
+	MPI_Bcast(&maxIndex, 1, MPI_LONG_LONG_INT, out.rank, MPI_COMM_WORLD);
 	*indexOut = maxIndex;
 }
 

@@ -84,8 +84,8 @@ REAL getImagAmpEl(MultiQubit multiQubit, long long int index){
 	return multiQubit.stateVec.imag[index];
 }
 
-void getLargestProbEl(MultiQubit multiQubit, REAL *maxProbOut, int *indexOut){
-        int index, maxIndex;
+void getLargestProbEl(MultiQubit multiQubit, REAL *maxProbOut, long long int *indexOut){
+        long long int index, maxIndex;
         REAL maxProb=0, tempProb=0;
         for (index=0; index<multiQubit.numAmps; index++){
                 tempProb = multiQubit.stateVec.real[index]*multiQubit.stateVec.real[index] + 
