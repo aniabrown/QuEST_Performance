@@ -1,0 +1,46 @@
+/bin/rm -f *.o demo
+icc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -c 3SATSolver.c
+icc: command line warning #10006: ignoring unknown option '-fprotect-parens'
+3SATSolver.c(317): (col. 34) remark: main has been targeted for automatic cpu dispatch
+icc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -c ../../../QuEST_v0.9.0/qubits.c
+icc: command line warning #10006: ignoring unknown option '-fprotect-parens'
+../../../QuEST_v0.9.0/qubits.c(385): (col. 1) remark: rotateQubitLocal has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(468): (col. 1) remark: rotateQubitDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(526): (col. 1) remark: controlRotateQubitLocal has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(625): (col. 1) remark: controlRotateQubitDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(871): (col. 1) remark: controlNotDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(987): (col. 1) remark: sigmaYDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1099): (col. 1) remark: hadamardDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1237): (col. 1) remark: phaseGateDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1318): (col. 1) remark: findProbabilityOfZeroLocal has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1397): (col. 1) remark: findProbabilityOfZeroDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1703): (col. 1) remark: measureInStateDistributedRenorm has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1846): (col. 1) remark: probOfFilterOut111Local has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1893): (col. 59) remark: getProbEl has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(290): (col. 1) remark: initStateDebug has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(243): (col. 1) remark: initStateOfSingleQubit has been targeted for automatic cpu dispatch
+icc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -c 3SATGenerator.c
+icc: command line warning #10006: ignoring unknown option '-fprotect-parens'
+icc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -c ../../../QuEST_v0.9.0/qubits_env_local.c
+icc: command line warning #10006: ignoring unknown option '-fprotect-parens'
+../../../QuEST_v0.9.0/qubits_env_local.c(47): (col. 49) remark: calcTotalProbability has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits_env_local.c(87): (col. 78) remark: getLargestProbEl has been targeted for automatic cpu dispatch
+icc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -o demo 3SATSolver.o qubits.o 3SATGenerator.o qubits_env_local.o -lm
+icc: command line warning #10006: ignoring unknown option '-fprotect-parens'
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 42.18140 s
+
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 42.12039 s
+
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 42.08813 s
+
+reached 11101011110111001101011001010> in 42s not including memory allocation with probability 0.000001
+which was the correct state
