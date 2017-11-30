@@ -20,7 +20,7 @@ int getNumClauses(int numBools);
 
 void nextBinaryNumber(int *bits, int numBits);
 
-void convertToBinary(int number, int numBits, int *outputBits);
+void convertToBinary(long long int number, int numBits, int *outputBits);
 
 
 #endif // SAT_GEN_H_
