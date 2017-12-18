@@ -97,7 +97,7 @@ void printEquation(int *equ, int numClauses) {
 }
 
 
-void convertToBinary(long long int number, int numBits, int *outputBits) {
+void convertToBinary(int number, int numBits, int *outputBits) {
 	// reversed, ofc
 	int bit;
 	for (int i=0; i < numBits; i++) {

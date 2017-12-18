@@ -1,0 +1,79 @@
+ 
+Imperial College London HPC Service
+-----------------------------------
+Job QuEST, jobid 58116.cx2, username abrown15 - started execution at 17:25:08 Mon 27/11/17 on system r5i7n1
+ 
+
+# mpiexec: full path to program is /home/abrown15/git_profiling/3sat/CX2/29qubits_4ranksx24threads/demo
+# mpiexec: program arguments are: /home/abrown15/git_profiling/3sat/CX2/29qubits_4ranksx24threads/../../3sat_input/q29/equ29qb.txt out.txt 1 0.78539816339 0
+# mpiexec: 4 ranks allocated via PBS select
+# mpiexec: 24 OpenMP threads / rank allocated by PBS select
+# mpiexec: Job has exclusive use of the allocated nodes. Enabling process-pinning
+# mpiexec: launching program...
+
+# mpiexec: machinefile configured as:
+r5i7n1.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n2.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n3.ib0.cx2.hpc.ic.ac.uk:1
+r5i7n4.ib0.cx2.hpc.ic.ac.uk:1
+#
+(r5i7n1.ib0.cx2.hpc.ic.ac.uk:0)
+(r5i7n2.ib0.cx2.hpc.ic.ac.uk:1)
+(r5i7n3.ib0.cx2.hpc.ic.ac.uk:2)
+(r5i7n4.ib0.cx2.hpc.ic.ac.uk:3)
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 4
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 134217728.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 44.52677 s
+
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 4
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 134217728.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 44.15268 s
+
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 4
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 134217728.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 42.71228 s
+
+local: 663, dist: 30
+reached 11101011110111001101011001010> in 43s not including memory allocation with probability 0.000001
+which was the correct state
+local: 663, dist: 30
+local: 663, dist: 30
+local: 663, dist: 30
+ 
+Imperial College London HPC Service
+-----------------------------------
+Job QuEST, jobid 58116.cx2, username abrown15 - end of execution at 17:27:20 Mon 27/11/17 on system r5i7n1
+ 

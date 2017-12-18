@@ -1,0 +1,163 @@
+ 
+Imperial College London HPC Service
+-----------------------------------
+Job QuEST, jobid 58215.cx2, username abrown15 - started execution at 12:14:30 Tue 28/11/17 on system r2i1n1
+ 
+
+# mpiexec: full path to program is /home/abrown15/git_profiling/3sat/CX2/35qubits_32ranksx24threads/demo
+# mpiexec: program arguments are: /home/abrown15/git_profiling/3sat/CX2/35qubits_32ranksx24threads/../../3sat_input/q35/equ35qb.txt out.txt 1 0.78539816339 0
+# mpiexec: 32 ranks allocated via PBS select
+# mpiexec: 24 OpenMP threads / rank allocated by PBS select
+# mpiexec: Job has exclusive use of the allocated nodes. Enabling process-pinning
+# mpiexec: launching program...
+
+# mpiexec: machinefile configured as:
+r2i1n10.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n1.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n2.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n3.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n4.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n5.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n6.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n7.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n8.ib0.cx2.hpc.ic.ac.uk:1
+r2i1n9.ib0.cx2.hpc.ic.ac.uk:1
+r2i3n10.ib0.cx2.hpc.ic.ac.uk:1
+r2i3n11.ib0.cx2.hpc.ic.ac.uk:1
+r2i3n12.ib0.cx2.hpc.ic.ac.uk:1
+r2i3n13.ib0.cx2.hpc.ic.ac.uk:1
+r2i3n9.ib0.cx2.hpc.ic.ac.uk:1
+r2i4n2.ib0.cx2.hpc.ic.ac.uk:1
+r2i4n3.ib0.cx2.hpc.ic.ac.uk:1
+r2i5n15.ib0.cx2.hpc.ic.ac.uk:1
+r2i5n16.ib0.cx2.hpc.ic.ac.uk:1
+r2i5n7.ib0.cx2.hpc.ic.ac.uk:1
+r2i5n8.ib0.cx2.hpc.ic.ac.uk:1
+r2i7n11.ib0.cx2.hpc.ic.ac.uk:1
+r3i4n10.ib0.cx2.hpc.ic.ac.uk:1
+r3i4n11.ib0.cx2.hpc.ic.ac.uk:1
+r3i4n2.ib0.cx2.hpc.ic.ac.uk:1
+r3i4n3.ib0.cx2.hpc.ic.ac.uk:1
+r3i4n4.ib0.cx2.hpc.ic.ac.uk:1
+r3i4n5.ib0.cx2.hpc.ic.ac.uk:1
+r3i4n6.ib0.cx2.hpc.ic.ac.uk:1
+r3i4n7.ib0.cx2.hpc.ic.ac.uk:1
+r3i4n8.ib0.cx2.hpc.ic.ac.uk:1
+r3i4n9.ib0.cx2.hpc.ic.ac.uk:1
+#
+(r2i1n10.ib0.cx2.hpc.ic.ac.uk:0)
+(r2i1n1.ib0.cx2.hpc.ic.ac.uk:1)
+(r2i1n2.ib0.cx2.hpc.ic.ac.uk:2)
+(r2i1n3.ib0.cx2.hpc.ic.ac.uk:3)
+(r2i1n4.ib0.cx2.hpc.ic.ac.uk:4)
+(r2i1n5.ib0.cx2.hpc.ic.ac.uk:5)
+(r2i1n6.ib0.cx2.hpc.ic.ac.uk:6)
+(r2i1n7.ib0.cx2.hpc.ic.ac.uk:7)
+(r2i1n8.ib0.cx2.hpc.ic.ac.uk:8)
+(r2i1n9.ib0.cx2.hpc.ic.ac.uk:9)
+(r2i3n10.ib0.cx2.hpc.ic.ac.uk:10)
+(r2i3n11.ib0.cx2.hpc.ic.ac.uk:11)
+(r2i3n12.ib0.cx2.hpc.ic.ac.uk:12)
+(r2i3n13.ib0.cx2.hpc.ic.ac.uk:13)
+(r2i3n9.ib0.cx2.hpc.ic.ac.uk:14)
+(r2i4n2.ib0.cx2.hpc.ic.ac.uk:15)
+(r2i4n3.ib0.cx2.hpc.ic.ac.uk:16)
+(r2i5n15.ib0.cx2.hpc.ic.ac.uk:17)
+(r2i5n16.ib0.cx2.hpc.ic.ac.uk:18)
+(r2i5n7.ib0.cx2.hpc.ic.ac.uk:19)
+(r2i5n8.ib0.cx2.hpc.ic.ac.uk:20)
+(r2i7n11.ib0.cx2.hpc.ic.ac.uk:21)
+(r3i4n10.ib0.cx2.hpc.ic.ac.uk:22)
+(r3i4n11.ib0.cx2.hpc.ic.ac.uk:23)
+(r3i4n2.ib0.cx2.hpc.ic.ac.uk:24)
+(r3i4n3.ib0.cx2.hpc.ic.ac.uk:25)
+(r3i4n4.ib0.cx2.hpc.ic.ac.uk:26)
+(r3i4n5.ib0.cx2.hpc.ic.ac.uk:27)
+(r3i4n6.ib0.cx2.hpc.ic.ac.uk:28)
+(r3i4n7.ib0.cx2.hpc.ic.ac.uk:29)
+(r3i4n8.ib0.cx2.hpc.ic.ac.uk:30)
+(r3i4n9.ib0.cx2.hpc.ic.ac.uk:31)
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 32
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 35.
+Number of amps is 34359738368.
+Number of amps per rank is 1073741824.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 844.19889 s
+
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 32
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 35.
+Number of amps is 34359738368.
+Number of amps per rank is 1073741824.
+cycle 1/1, theta=0.785398 pi/2
+
+
+TOTAL TIME = 813.40846 s
+
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 32
+OpenMP enabled
+Number of threads available is 24
+Precision: size of REAL is 8 bytes
+QUBITS:
+Number of qubits is 35.
+Number of amps is 34359738368.
+Number of amps per rank is 1073741824.
+cycle 1/1, theta=0.785398 pi/2
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+
+
+TOTAL TIME = 812.58885 s
+
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+local: 777, dist: 15
+reached 10000100000110111011101010001111001> in 811s not including memory allocation with probability 0.000000
+which was the correct state
+ 
+Imperial College London HPC Service
+-----------------------------------
+Job QuEST, jobid 58215.cx2, username abrown15 - end of execution at 12:55:41 Tue 28/11/17 on system r2i1n1
+ 

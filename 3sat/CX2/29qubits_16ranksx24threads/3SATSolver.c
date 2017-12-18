@@ -128,7 +128,7 @@ void createOrClearFile(char *filename) {
 
 
 void extractSolution(MultiQubit qubits, int *solBits, REAL *solProb) {
-	long long int solInt = 0;
+	int solInt = 0;
 	getLargestProbEl(qubits, solProb, &solInt);
 	convertToBinary(solInt, qubits.numQubits, solBits);
 }
@@ -518,8 +518,6 @@ int main (int narg, char** varg) {
 	/*
 	 * FREE MEMORY
 	 */
-
-	return EXIT_SUCCESS;
 
 	free(equ);
 	free(sol);
