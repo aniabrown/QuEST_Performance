@@ -1,0 +1,35 @@
+--------------------------------------------------------------------------------
+*** ambrown2   Job: 4991765.sdb   started: 18/12/17 10:51:13   host: mom2 ***
+*** ambrown2   Job: 4991765.sdb   started: 18/12/17 10:51:13   host: mom2 ***
+*** ambrown2   Job: 4991765.sdb   started: 18/12/17 10:51:13   host: mom2 ***
+*** ambrown2   Job: 4991765.sdb   started: 18/12/17 10:51:13   host: mom2 ***
+
+--------------------------------------------------------------------------------
+/bin/rm -f *.o demo
+cc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -c timingRotation.c
+cc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -c ../../../QuEST_v0.9.0/qubits.c
+cc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -c ../../../QuEST_v0.9.0/qubits_env_local.c
+cc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -o demo timingRotation.o qubits.o qubits_env_local.o -lm
+QUBITS:
+Number of qubits is 29.
+Number of amps is 536870912.
+Number of amps per rank is 536870912.
+EXECUTION ENVIRONMENT:
+Running locally on one node
+Number of ranks is 1
+OpenMP enabled
+Number of threads available is 16
+Precision: size of REAL is 8 bytes
+Rotating
+VERIFICATION: total probability=1.00000000000008
+Application 29535753 resources: utime ~3218s, stime ~9s, Rss ~8386588, inblocks ~3697, outblocks ~9714
+--------------------------------------------------------------------------------
+
+Resources requested: ncpus=24,place=free,walltime=00:10:00
+Resources allocated: cpupercent=0,cput=00:00:06,mem=48392kb,ncpus=24,vmem=283092kb,walltime=00:03:37
+
+*** ambrown2   Job: 4991765.sdb   ended: 18/12/17 10:54:51   queue: standard ***
+*** ambrown2   Job: 4991765.sdb   ended: 18/12/17 10:54:51   queue: standard ***
+*** ambrown2   Job: 4991765.sdb   ended: 18/12/17 10:54:51   queue: standard ***
+*** ambrown2   Job: 4991765.sdb   ended: 18/12/17 10:54:51   queue: standard ***
+--------------------------------------------------------------------------------

@@ -519,8 +519,6 @@ int main (int narg, char** varg) {
 	 * FREE MEMORY
 	 */
 
-	return EXIT_SUCCESS;
-
 	free(equ);
 	free(sol);
 	free(inFN);
