@@ -1,0 +1,27 @@
+#!/bin/bash --login
+
+# set the number of nodes and processes per node. We are running one process on a single node
+#PBS -l select=1
+# for jobs needing 128Gb per node
+####PBS -l select=1:bigmem=true
+
+#PBS -l walltime=02:40:00
+
+# set name of job
+#PBS -N QuEST
+
+#PBS -A e555
+
+module swap PrgEnv-cray PrgEnv-intel
+
+cd $PBS_O_WORKDIR
+
+NUM_QUBITS=31
+EXE=demo
+export KMP_AFFINITY=disabled
+export OMP_NUM_THREADS=8
+
+make clean
+make
+
+aprun -n 1 -d 8 -cc numa_node ./$EXE $NUM_QUBITS
