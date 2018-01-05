@@ -1,0 +1,21 @@
+#!/bin/bash --login
+
+# set the number of nodes and processes per node. We are running one process on a single node
+#PBS -l select=64:ncpus=24:mpiprocs=1:ompthreads=24:mem=50gb
+
+#PBS -l walltime=02:00:00
+
+# set name of job
+#PBS -N QuEST
+
+module purge
+module load intel-suite mpi/intel-2018
+module list
+
+EXE=demo
+
+export OMP_NUM_THREADS=24
+
+mpiexec $PBS_O_WORKDIR/$EXE $PBS_O_WORKDIR/../../3sat_input/q35/equ35qb.txt out.txt 1 0.78539816339 0
+
+cp $TMPDIR/TIMING3SAT_* $PBS_O_WORKDIR/
