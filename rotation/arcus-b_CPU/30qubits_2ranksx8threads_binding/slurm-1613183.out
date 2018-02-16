@@ -1,0 +1,86 @@
+/bin/rm -f *.o demo
+mpicc -O2 -fprotect-parens -std=c99 -openmp -c timingRotation.c
+icc: command line remark #10411: option '-openmp' is deprecated and will be removed in a future release. Please use the replacement option '-qopenmp'
+timingRotation.c(65): (col. 34) remark: main has been targeted for automatic cpu dispatch
+mpicc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits.c
+icc: command line remark #10411: option '-openmp' is deprecated and will be removed in a future release. Please use the replacement option '-qopenmp'
+../../../QuEST_v0.9.0/qubits.c(385): (col. 1) remark: rotateQubitLocal has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(468): (col. 1) remark: rotateQubitDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(526): (col. 1) remark: controlRotateQubitLocal has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(625): (col. 1) remark: controlRotateQubitDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1099): (col. 1) remark: hadamardDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1237): (col. 1) remark: phaseGateDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1318): (col. 1) remark: findProbabilityOfZeroLocal has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1397): (col. 1) remark: findProbabilityOfZeroDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1703): (col. 1) remark: measureInStateDistributedRenorm has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1752): (col. 1) remark: measureInStateDistributedSetZero has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1846): (col. 1) remark: probOfFilterOut111Local has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1893): (col. 59) remark: getProbEl has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(290): (col. 1) remark: initStateDebug has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(204): (col. 1) remark: initStatePlus has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(162): (col. 1) remark: initStateZero has been targeted for automatic cpu dispatch
+mpicc -O2 -fprotect-parens -std=c99 -openmp -c ../../../QuEST_v0.9.0/qubits_env_mpi.c
+icc: command line remark #10411: option '-openmp' is deprecated and will be removed in a future release. Please use the replacement option '-qopenmp'
+../../../QuEST_v0.9.0/qubits_env_mpi.c(107): (col. 88) remark: getLargestProbEl has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits_env_mpi.c(132): (col. 49) remark: calcTotalProbability has been targeted for automatic cpu dispatch
+mpicc -O2 -fprotect-parens -std=c99 -openmp -o demo timingRotation.o qubits.o qubits_env_mpi.o -lm
+icc: command line remark #10411: option '-openmp' is deprecated and will be removed in a future release. Please use the replacement option '-qopenmp'
+QUBITS:
+Number of qubits is 30.
+Number of amps is 1073741824.
+Number of amps per rank is 536870912.
+EXECUTION ENVIRONMENT:
+Running distributed (MPI) version
+Number of ranks is 2
+OpenMP enabled
+OMP: Info #204: KMP_AFFINITY: decoding x2APIC ids.
+OMP: Info #202: KMP_AFFINITY: Affinity capable, using global cpuid leaf 11 info
+OMP: Info #154: KMP_AFFINITY: Initial OS proc set respected: {0,1,2,3,4,5,6,7}
+OMP: Info #156: KMP_AFFINITY: 8 available OS procs
+OMP: Info #157: KMP_AFFINITY: Uniform topology
+OMP: Info #179: KMP_AFFINITY: 1 packages x 8 cores/pkg x 1 threads/core (8 total cores)
+OMP: Info #206: KMP_AFFINITY: OS proc to physical thread map:
+OMP: Info #171: KMP_AFFINITY: OS proc 0 maps to package 0 core 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 1 maps to package 0 core 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 2 maps to package 0 core 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 3 maps to package 0 core 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 4 maps to package 0 core 4 
+OMP: Info #171: KMP_AFFINITY: OS proc 5 maps to package 0 core 5 
+OMP: Info #171: KMP_AFFINITY: OS proc 6 maps to package 0 core 6 
+OMP: Info #171: KMP_AFFINITY: OS proc 7 maps to package 0 core 7 
+OMP: Info #242: KMP_AFFINITY: pid 27137 thread 0 bound to OS proc set {0}
+OMP: Info #204: KMP_AFFINITY: decoding x2APIC ids.
+Number of threads available is 8
+Precision: size of REAL is 8 bytes
+OMP: Info #242: KMP_AFFINITY: pid 27137 thread 1 bound to OS proc set {1}
+OMP: Info #202: KMP_AFFINITY: Affinity capable, using global cpuid leaf 11 info
+OMP: Info #154: KMP_AFFINITY: Initial OS proc set respected: {8,9,10,11,12,13,14,15}
+OMP: Info #156: KMP_AFFINITY: 8 available OS procs
+OMP: Info #157: KMP_AFFINITY: Uniform topology
+OMP: Info #179: KMP_AFFINITY: 1 packages x 8 cores/pkg x 1 threads/core (8 total cores)
+OMP: Info #206: KMP_AFFINITY: OS proc to physical thread map:
+OMP: Info #171: KMP_AFFINITY: OS proc 8 maps to package 1 core 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 9 maps to package 1 core 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 10 maps to package 1 core 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 11 maps to package 1 core 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 12 maps to package 1 core 4 
+OMP: Info #171: KMP_AFFINITY: OS proc 13 maps to package 1 core 5 
+OMP: Info #171: KMP_AFFINITY: OS proc 14 maps to package 1 core 6 
+OMP: Info #171: KMP_AFFINITY: OS proc 15 maps to package 1 core 7 
+OMP: Info #242: KMP_AFFINITY: pid 27138 thread 0 bound to OS proc set {8}
+OMP: Info #242: KMP_AFFINITY: pid 27138 thread 2 bound to OS proc set {10}
+OMP: Info #242: KMP_AFFINITY: pid 27138 thread 1 bound to OS proc set {9}
+OMP: Info #242: KMP_AFFINITY: pid 27137 thread 2 bound to OS proc set {2}
+OMP: Info #242: KMP_AFFINITY: pid 27137 thread 3 bound to OS proc set {3}
+OMP: Info #242: KMP_AFFINITY: pid 27138 thread 3 bound to OS proc set {11}
+OMP: Info #242: KMP_AFFINITY: pid 27138 thread 4 bound to OS proc set {12}
+OMP: Info #242: KMP_AFFINITY: pid 27137 thread 4 bound to OS proc set {4}
+OMP: Info #242: KMP_AFFINITY: pid 27137 thread 5 bound to OS proc set {5}
+OMP: Info #242: KMP_AFFINITY: pid 27138 thread 5 bound to OS proc set {13}
+OMP: Info #242: KMP_AFFINITY: pid 27138 thread 6 bound to OS proc set {14}
+OMP: Info #242: KMP_AFFINITY: pid 27137 thread 6 bound to OS proc set {6}
+OMP: Info #242: KMP_AFFINITY: pid 27137 thread 7 bound to OS proc set {7}
+OMP: Info #242: KMP_AFFINITY: pid 27138 thread 7 bound to OS proc set {15}
+RotatingRotating
+
+VERIFICATION: total probability=1.00000000000008

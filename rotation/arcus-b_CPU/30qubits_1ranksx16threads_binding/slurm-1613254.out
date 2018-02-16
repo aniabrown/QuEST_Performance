@@ -1,0 +1,97 @@
+/bin/rm -f *.o demo
+icc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -c timingRotation.c
+icc: command line warning #10006: ignoring unknown option '-fprotect-parens'
+timingRotation.c(217): warning #181: argument of type "long" is incompatible with format "%d", expecting argument of type "int"
+                          fprintf(timing, "%d, %.8f, %.8f, %.8f, %.8f\n", index, avg, standardDev, max-avg, avg-min);
+                                                                          ^
+
+timingRotation.c(65): (col. 34) remark: main has been targeted for automatic cpu dispatch
+icc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -c ../../../QuEST_v0.9.0/qubits.c
+icc: command line warning #10006: ignoring unknown option '-fprotect-parens'
+../../../QuEST_v0.9.0/qubits.c(385): (col. 1) remark: rotateQubitLocal has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(468): (col. 1) remark: rotateQubitDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(526): (col. 1) remark: controlRotateQubitLocal has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(625): (col. 1) remark: controlRotateQubitDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(871): (col. 1) remark: controlNotDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(987): (col. 1) remark: sigmaYDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1099): (col. 1) remark: hadamardDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1237): (col. 1) remark: phaseGateDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1318): (col. 1) remark: findProbabilityOfZeroLocal has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1397): (col. 1) remark: findProbabilityOfZeroDistributed has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1703): (col. 1) remark: measureInStateDistributedRenorm has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1846): (col. 1) remark: probOfFilterOut111Local has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(1893): (col. 59) remark: getProbEl has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(290): (col. 1) remark: initStateDebug has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits.c(243): (col. 1) remark: initStateOfSingleQubit has been targeted for automatic cpu dispatch
+icc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -c ../../../QuEST_v0.9.0/qubits_env_local.c
+icc: command line warning #10006: ignoring unknown option '-fprotect-parens'
+../../../QuEST_v0.9.0/qubits_env_local.c(47): (col. 49) remark: calcTotalProbability has been targeted for automatic cpu dispatch
+../../../QuEST_v0.9.0/qubits_env_local.c(87): (col. 88) remark: getLargestProbEl has been targeted for automatic cpu dispatch
+icc -O2 -fprotect-parens -std=c99 -Wall -xAVX -axCORE-AVX2 -restrict -openmp -o demo timingRotation.o qubits.o qubits_env_local.o -lm
+icc: command line warning #10006: ignoring unknown option '-fprotect-parens'
+OMP: Info #204: KMP_AFFINITY: decoding x2APIC ids.
+OMP: Info #202: KMP_AFFINITY: Affinity capable, using global cpuid leaf 11 info
+OMP: Info #154: KMP_AFFINITY: Initial OS proc set respected: {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+OMP: Info #156: KMP_AFFINITY: 16 available OS procs
+OMP: Info #157: KMP_AFFINITY: Uniform topology
+OMP: Info #179: KMP_AFFINITY: 2 packages x 8 cores/pkg x 1 threads/core (16 total cores)
+OMP: Info #206: KMP_AFFINITY: OS proc to physical thread map:
+OMP: Info #171: KMP_AFFINITY: OS proc 0 maps to package 0 core 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 1 maps to package 0 core 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 2 maps to package 0 core 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 3 maps to package 0 core 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 4 maps to package 0 core 4 
+OMP: Info #171: KMP_AFFINITY: OS proc 5 maps to package 0 core 5 
+OMP: Info #171: KMP_AFFINITY: OS proc 6 maps to package 0 core 6 
+OMP: Info #171: KMP_AFFINITY: OS proc 7 maps to package 0 core 7 
+OMP: Info #171: KMP_AFFINITY: OS proc 8 maps to package 1 core 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 9 maps to package 1 core 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 10 maps to package 1 core 2 
+OMP: Info #171: KMP_AFFINITY: OS proc 11 maps to package 1 core 3 
+OMP: Info #171: KMP_AFFINITY: OS proc 12 maps to package 1 core 4 
+OMP: Info #171: KMP_AFFINITY: OS proc 13 maps to package 1 core 5 
+OMP: Info #171: KMP_AFFINITY: OS proc 14 maps to package 1 core 6 
+OMP: Info #171: KMP_AFFINITY: OS proc 15 maps to package 1 core 7 
+OMP: Info #147: KMP_AFFINITY: Internal thread 0 bound to OS proc set {0}
+OMP: Info #147: KMP_AFFINITY: Internal thread 1 bound to OS proc set {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+OMP: Info #147: KMP_AFFINITY: Internal thread 2 bound to OS proc set {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+OMP: Info #147: KMP_AFFINITY: Internal thread 3 bound to OS proc set {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+OMP: Info #147: KMP_AFFINITY: Internal thread 4 bound to OS proc set {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+OMP: Info #147: KMP_AFFINITY: Internal thread 5 bound to OS proc set {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+OMP: Info #147: KMP_AFFINITY: Internal thread 6 bound to OS proc set {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+OMP: Info #147: KMP_AFFINITY: Internal thread 7 bound to OS proc set {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+OMP: Info #147: KMP_AFFINITY: Internal thread 8 bound to OS proc set {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+OMP: Info #147: KMP_AFFINITY: Internal thread 9 bound to OS proc set {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+OMP: Info #147: KMP_AFFINITY: Internal thread 10 bound to OS proc set {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+OMP: Info #147: KMP_AFFINITY: Internal thread 11 bound to OS proc set {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+OMP: Info #147: KMP_AFFINITY: Internal thread 12 bound to OS proc set {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+OMP: Info #147: KMP_AFFINITY: Internal thread 13 bound to OS proc set {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+OMP: Info #147: KMP_AFFINITY: Internal thread 14 bound to OS proc set {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+OMP: Info #147: KMP_AFFINITY: Internal thread 15 bound to OS proc set {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+OMP: Info #147: OMP_PROC_BIND: Internal thread 2 bound to OS proc set {2}
+OMP: Info #147: OMP_PROC_BIND: Internal thread 3 bound to OS proc set {3}
+OMP: Info #147: OMP_PROC_BIND: Internal thread 12 bound to OS proc set {12}
+OMP: Info #147: OMP_PROC_BIND: Internal thread 15 bound to OS proc set {15}
+OMP: Info #147: OMP_PROC_BIND: Internal thread 13 bound to OS proc set {13}
+OMP: Info #147: OMP_PROC_BIND: Internal thread 11 bound to OS proc set {11}
+OMP: Info #147: OMP_PROC_BIND: Internal thread 10 bound to OS proc set {10}
+OMP: Info #147: OMP_PROC_BIND: Internal thread 8 bound to OS proc set {8}
+OMP: Info #147: OMP_PROC_BIND: Internal thread 9 bound to OS proc set {9}
+OMP: Info #147: OMP_PROC_BIND: Internal thread 14 bound to OS proc set {14}
+OMP: Info #147: OMP_PROC_BIND: Internal thread 1 bound to OS proc set {1}
+OMP: Info #147: OMP_PROC_BIND: Internal thread 4 bound to OS proc set {4}
+OMP: Info #147: OMP_PROC_BIND: Internal thread 5 bound to OS proc set {5}
+OMP: Info #147: OMP_PROC_BIND: Internal thread 7 bound to OS proc set {7}
+OMP: Info #147: OMP_PROC_BIND: Internal thread 6 bound to OS proc set {6}
+QUBITS:
+Number of qubits is 30.
+Number of amps is 1073741824.
+Number of amps per rank is 1073741824.
+EXECUTION ENVIRONMENT:
+Running locally on one node
+Number of ranks is 1
+OpenMP enabled
+Number of threads available is 16
+Precision: size of REAL is 8 bytes
+Rotating
+VERIFICATION: total probability=0.99999999963078
