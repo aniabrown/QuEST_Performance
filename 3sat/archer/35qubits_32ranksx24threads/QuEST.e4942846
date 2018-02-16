@@ -1,0 +1,5 @@
+MPICH2 ERROR [Rank 5] [job id 29217089] [Tue Nov 28 11:06:15 2017] [c1-1c0s13n3] [nid01783] - MPID_nem_gni_check_localCQ(): Replaying failed network transaction
+MPICH2 ERROR [Rank 0] [job id 29217089] [Tue Nov 28 11:06:23 2017] [c4-0c2s6n1] [nid00921] - MPID_nem_gni_check_localCQ(): Replaying failed network transaction
+MPICH2 ERROR [Rank 1] [job id 29217089] [Tue Nov 28 11:06:16 2017] [c5-0c1s9n2] [nid01062] - MPID_nem_gni_check_localCQ(): Replaying failed network transaction
+MPICH2 ERROR [Rank 4] [job id 29217089] [Tue Nov 28 11:06:15 2017] [c1-1c0s13n2] [nid01782] - MPID_nem_gni_check_localCQ(): Replaying failed network transaction
+[NID 00921] 2017-11-28 11:20:36 Apid 29217089: initiated application termination
